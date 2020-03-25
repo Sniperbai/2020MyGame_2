@@ -160,6 +160,7 @@ public class PlayerCharacter : MonoBehaviour
     public void UpdateAnimator()
     {
         animator.SetBool("isJump", !isGround);
+        animator.SetFloat("speedY",this .rigidbody2d.velocity.y);
         animator.SetBool("isCrouch",PlayerInput.instance.Vertical.value == -1);
     }
 

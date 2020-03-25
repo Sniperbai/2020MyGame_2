@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F370B0CE-8FF1-F620-7D43-9B92C9A0C036}</ProjectGuid>
+    <ProjectGuid>{3303FFD8-ED6D-D804-1C9C-7A676B43B06C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.Tilemap.Extras</AssemblyName>
@@ -77,13 +77,13 @@
     <None Include="Assets\Runtime\Brushes\TintedTilemap.shader" />
     <None Include="Assets\Runtime\Unity.2D.Tilemap.Extras.asmdef" />
     <Reference Include="UnityEditor.UI">
-      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame02/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame_2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame02/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame_2/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame02/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame_2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Hub/Editor/2019.2.3f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{8BB541EA-CFE3-5C5C-586F-514F4B5241BF}</ProjectGuid>
+    <ProjectGuid>{FA32A3CC-3D2E-FA1A-CB04-D185FDA640AE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.Tilemap.Extras.Editor</AssemblyName>
@@ -80,19 +80,19 @@
     <None Include="Assets\Editor\Tiles\RuleTile\ScriptTemplates\NewCustomRuleTile.cs.txt" />
     <None Include="Assets\Editor\Unity.2D.Tilemap.Extras.Editor.asmdef" />
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame02/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame_2/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame02/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame_2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame02/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame_2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.TestRunner">
-      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame02/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame_2/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
-      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame02/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame_2/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Hub/Editor/2019.2.3f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -287,7 +287,7 @@
       <HintPath>/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame02/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame_2/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>/Applications/Unity/Hub/Editor/2019.2.3f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -652,7 +652,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.2D.Tilemap.Extras.csproj">
-      <Project>{F370B0CE-8FF1-F620-7D43-9B92C9A0C036}</Project>
+      <Project>{3303FFD8-ED6D-D804-1C9C-7A676B43B06C}</Project>
       <Name>Unity.2D.Tilemap.Extras</Name>
     </ProjectReference>
   </ItemGroup>

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{D0D24722-61E8-A349-7E52-E73B8B9F9217}</ProjectGuid>
+    <ProjectGuid>{155432D1-7EE6-A533-C1DB-CEA9DB2B7E56}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -95,37 +95,37 @@
     <None Include="Assets\2DGamekit\Utilities\Shaders\FrostedGlass.shader" />
     <None Include="Assets\2DGamekit\Utilities\Shaders\NormalMappedTileAnimated.shader" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame02/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame_2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame02/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame_2/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame02/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame_2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame02/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame_2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame02/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame_2/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame02/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame_2/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame02/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame_2/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame02/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame_2/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame02/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame_2/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame02/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame_2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame02/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>/Users/baibin/New Dream Team/MyUnityProject/2020MyGame_2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Hub/Editor/2019.2.3f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -658,11 +658,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.2D.Tilemap.Extras.Editor.csproj">
-      <Project>{8BB541EA-CFE3-5C5C-586F-514F4B5241BF}</Project>
+      <Project>{FA32A3CC-3D2E-FA1A-CB04-D185FDA640AE}</Project>
       <Name>Unity.2D.Tilemap.Extras.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Tilemap.Extras.csproj">
-      <Project>{F370B0CE-8FF1-F620-7D43-9B92C9A0C036}</Project>
+      <Project>{3303FFD8-ED6D-D804-1C9C-7A676B43B06C}</Project>
       <Name>Unity.2D.Tilemap.Extras</Name>
     </ProjectReference>
   </ItemGroup>
