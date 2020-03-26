@@ -17,6 +17,7 @@ public class PlayerCharacter : MonoBehaviour
     #region 字段
 
     Rigidbody2D rigidbody2d;
+    CapsuleCollider2D capsuleCollider;
     SpriteRenderer spriteRenderer;     // 渲染人物
 
     public float speedX;               //X方向的速度
@@ -37,7 +38,7 @@ public class PlayerCharacter : MonoBehaviour
 
     PassPlatform currentPlatform;      //当前处在的平台
 
-    public Transform startCheckPos;     //射线开始检测的位置
+    public Transform startCheckPos;     //开始检查是否在地面的开始点
 
     #endregion
 
@@ -46,10 +47,12 @@ public class PlayerCharacter : MonoBehaviour
     private void Start()
     {
         rigidbody2d = transform.GetComponent<Rigidbody2D>();
+        capsuleCollider = transform.GetComponent<CapsuleCollider2D>();
         spriteRenderer = transform.GetComponent<SpriteRenderer>();
         animator = transform.GetComponent<Animator>();
         followTarget = transform.Find("followTarget");
-        followTarget.position = transform.position + followTargetOffset;       
+        followTarget.position = transform.position + followTargetOffset;
+        startCheckPos = transform.Find("startCheckPos");
     }
 
     private void Update()
@@ -112,10 +115,34 @@ public class PlayerCharacter : MonoBehaviour
     //检测是否在地面
     public void CheckGround() {
 
-        RaycastHit2D raycastHit2D = Physics2D.Raycast(startCheckPos.position, Vector3.down, 0.3f, 1 << 8);
+        RaycastHit2D raycastHit2D = Physics2D.Raycast(startCheckPos.position, Vector3.down, 0.2f, 1 << 8);
         isGround = raycastHit2D;
 
-        Debug.DrawLine(startCheckPos.position, startCheckPos.position + Vector3.down * 0.3f, Color.red);
+        if (raycastHit2D)
+        {
+            if (raycastHit2D.collider.tag == TagConst.SkyGround)
+            {
+                if (raycastHit2D.point.y < raycastHit2D.transform.position.y + raycastHit2D.transform.GetComponent<BoxCollider2D>().offset.y)
+                {
+                    isGround = false;
+                }
+                else
+                {
+                    isGround = true;
+                }
+
+             
+            }
+            else
+            {
+                isGround = true;
+            }
+        }
+        else
+        {
+            isGround = false;
+        }
+        Debug.DrawLine(startCheckPos.position, startCheckPos.position + Vector3.down * 0.2f, Color.red);
 
         //if (raycastHit2D)
         //{
