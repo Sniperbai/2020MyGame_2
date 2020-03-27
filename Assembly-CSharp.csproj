@@ -76,8 +76,10 @@
     <Compile Include="Assets\Scripts\Object\PassPlatform.cs" />
     <Compile Include="Assets\Scripts\Object\PlayerCharacter.cs" />
     <Compile Include="Assets\Scripts\Object\PlayerInput.cs" />
+    <Compile Include="Assets\Scripts\Object\Water.cs" />
     <Compile Include="Assets\Scripts\Other\CameraFollowTarget.cs" />
     <Compile Include="Assets\Scripts\Other\OpenUrl.cs" />
+    <Compile Include="Assets\Scripts\Other\OrderSetting.cs" />
     <Compile Include="Assets\Scripts\Other\SpriteOffsetWithMouse.cs" />
     <Compile Include="Assets\Scripts\View\MenuPanel.cs" />
     <Compile Include="Assets\Scripts\View\MyButtons.cs" />

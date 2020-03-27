@@ -1,20 +1,16 @@
 ﻿<Properties StartupConfiguration="{155432D1-7EE6-A533-C1DB-CEA9DB2B7E56}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Const/TagConst.cs">
-    <Files>
-      <File FileName="Assets/Scripts/Object/PlayerCharacter.cs" Line="53" Column="57" />
-      <File FileName="Assets/Scripts/Object/PlayerCharacter.cs" Line="232" Column="1" />
-      <File FileName="Assets/Scripts/Const/TagConst.cs" Line="8" Column="6" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="2020MyGame_2" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Const" expanded="True">
-                  <Node name="TagConst.cs" selected="True" />
+                <Node name="Const" expanded="True" />
+                <Node name="Object" expanded="True">
+                  <Node name="PlayerCharacter.cs" selected="True" />
                 </Node>
-                <Node name="Object" expanded="True" />
+                <Node name="Other" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -24,7 +20,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="82ea705a-6c97-48a0-8cc4-928c7e98bf75" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7381ce04-c8c9-4a44-99d0-264e2e6ea898" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
