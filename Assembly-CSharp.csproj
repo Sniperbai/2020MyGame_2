@@ -65,6 +65,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Const\Const.cs" />
     <Compile Include="Assets\Scripts\Const\TagConst.cs" />
+    <Compile Include="Assets\Scripts\Controller\Damage.cs" />
+    <Compile Include="Assets\Scripts\Controller\Damageable.cs" />
     <Compile Include="Assets\Scripts\Controller\SceneController.cs" />
     <Compile Include="Assets\Scripts\Object\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\Object\HubDoor.cs" />

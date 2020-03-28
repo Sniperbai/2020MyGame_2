@@ -9153,24 +9153,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1358285036, guid: cb8df5edbb5664208a777669df5106a5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1358285035, guid: cb8df5edbb5664208a777669df5106a5, type: 3}
-      propertyPath: m_Name
-      value: startCheckPos
-      objectReference: {fileID: 0}
-    - target: {fileID: 440916406678147993, guid: cb8df5edbb5664208a777669df5106a5,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: 0.97989845
-      objectReference: {fileID: 0}
-    - target: {fileID: 440916406678147993, guid: cb8df5edbb5664208a777669df5106a5,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 2.1732383
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb8df5edbb5664208a777669df5106a5, type: 3}
 --- !u!1 &984937142
@@ -24339,6 +24321,7 @@ GameObject:
   - component: {fileID: 2096280048}
   - component: {fileID: 2096280047}
   - component: {fileID: 2096280046}
+  - component: {fileID: 2096280049}
   m_Layer: 0
   m_Name: water
   m_TagString: Untagged
@@ -24399,6 +24382,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2096280049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096280045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c8ad200283c4dbb971667bbf23b01b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1 &2109852754
 GameObject:
   m_ObjectHideFlags: 0

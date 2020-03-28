@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class Water : MonoBehaviour
 {
+    Damage damage;
+
+    private void Start()
+    {
+        damage = transform.GetComponent<Damage>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
-        //对游戏物体造成伤害TODO
-
-        //血量减少TODO
-        
+        damage.OnDamage(collision.gameObject);
     }
 }
 

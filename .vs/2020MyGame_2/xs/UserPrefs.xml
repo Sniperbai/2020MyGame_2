@@ -1,5 +1,10 @@
 ﻿<Properties StartupConfiguration="{155432D1-7EE6-A533-C1DB-CEA9DB2B7E56}|">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Object/Water.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Controller/Damage.cs" Line="32" Column="1" />
+      <File FileName="Assets/Scripts/Controller/Damageable.cs" Line="34" Column="26" />
+      <File FileName="Assets/Scripts/Object/Water.cs" Line="16" Column="45" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -7,8 +12,9 @@
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
                 <Node name="Const" expanded="True" />
+                <Node name="Controller" expanded="True" />
                 <Node name="Object" expanded="True">
-                  <Node name="PlayerCharacter.cs" selected="True" />
+                  <Node name="Water.cs" selected="True" />
                 </Node>
                 <Node name="Other" expanded="True" />
               </Node>
