@@ -39,6 +39,11 @@ public class PlayerCharacter : MonoBehaviour
     PassPlatform currentPlatform;      //当前处在的平台
 
     public Transform startCheckPos;     //开始检查是否在地面的开始点
+    public ContactFilter2D ContactFilter;
+    RaycastHit2D[] m_HitBuffer = new RaycastHit2D[5];
+    public int count;
+
+    Damageable playerDamageable;
 
     #endregion
 
@@ -53,6 +58,11 @@ public class PlayerCharacter : MonoBehaviour
         followTarget = transform.Find("followTarget");
         followTarget.position = transform.position + followTargetOffset;
         startCheckPos = transform.Find("startCheckPos");
+
+        playerDamageable = transform.GetComponent<Damageable>();  //初始化受伤功能
+        playerDamageable.OnHurt += this.OnHurt;                   //注册受伤事件
+        playerDamageable.OnDead += this.OnDead;                   //注册死亡事件
+
     }
 
     private void Update()
@@ -248,6 +258,30 @@ public class PlayerCharacter : MonoBehaviour
         {
             followTarget.position = Vector3.MoveTowards(followTarget.position, transform.position + followTargetOffset, 0.1f);
         }
+
+    }
+
+    #endregion
+
+    #region 受伤相关的方法
+
+    public void OnHurt()
+    {
+        //播放受伤动画
+        animator.SetTrigger("hurt");
+
+        //更新血条
+    }
+
+    public void OnDead()
+    {
+        //播放死亡动画
+
+        //返回菜单
+    }
+
+    public void Attack()
+    {
 
     }
 
