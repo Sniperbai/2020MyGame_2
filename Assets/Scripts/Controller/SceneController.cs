@@ -26,35 +26,21 @@ public class SceneController
 
     //加载场景
     public void LoadScene(int target)
-    {
-        //加载界面
-        if (SceneLoadPanel._instance == null)
-        {
-            GameObject.Instantiate(Resources.Load<GameObject>("Prefabs/View/LoadScenePanel"));
-        }
-
-        
+    {        
         //加载
         currentLoadOperation  = SceneManager.LoadSceneAsync(target);
 
         //显示界面
-        SceneLoadPanel._instance.UpdateProcess(currentLoadOperation);
+        SceneLoadPanel.Instance.UpdateProcess(currentLoadOperation);
     }
 
     public void LoadScene(int target, Action<AsyncOperation> onComplete)
     {
-        //加载界面
-        if (SceneLoadPanel._instance == null)
-        {
-            GameObject.Instantiate(Resources.Load<GameObject>("Prefabs/View/LoadScenePanel"));
-        }
-
-
         //加载
         currentLoadOperation = SceneManager.LoadSceneAsync(target);
 
         //显示界面
-        SceneLoadPanel._instance.UpdateProcess(currentLoadOperation);
+        SceneLoadPanel.Instance.UpdateProcess(currentLoadOperation);
         currentLoadOperation.completed += onComplete;
     }
 

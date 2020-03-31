@@ -1,8 +1,14 @@
 ﻿<Properties StartupConfiguration="{155432D1-7EE6-A533-C1DB-CEA9DB2B7E56}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Object/PlayerCharacter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/View/TipMessagePanel.cs">
     <Files>
-      <File FileName="Assets/Scripts/View/GamePanel.cs" Line="17" Column="23" />
-      <File FileName="Assets/Scripts/Object/PlayerCharacter.cs" Line="67" Column="6" />
+      <File FileName="Assets/Scripts/View/GamePanel.cs" Line="18" Column="5" />
+      <File FileName="Assets/Scripts/Object/PlayerCharacter.cs" Line="308" Column="39" />
+      <File FileName="Assets/Scripts/Controller/Damageable.cs" Line="52" Column="1" />
+      <File FileName="Assets/Scripts/Controller/Damage.cs" Line="27" Column="26" />
+      <File FileName="Assets/Scripts/Object/InfoSign.cs" Line="35" Column="30" />
+      <File FileName="Assets/Scripts/Controller/SceneController.cs" Line="48" Column="6" />
+      <File FileName="Assets/Scripts/View/SingletonView.cs" Line="17" Column="75" />
+      <File FileName="Assets/Scripts/View/TipMessagePanel.cs" Line="29" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,11 +18,11 @@
               <Node name="Scripts" expanded="True">
                 <Node name="Const" expanded="True" />
                 <Node name="Controller" expanded="True" />
-                <Node name="Object" expanded="True">
-                  <Node name="PlayerCharacter.cs" selected="True" />
-                </Node>
+                <Node name="Object" expanded="True" />
                 <Node name="Other" expanded="True" />
-                <Node name="View" expanded="True" />
+                <Node name="View" expanded="True">
+                  <Node name="TipMessagePanel.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>
@@ -26,7 +32,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e13851ae-010f-404b-a5c2-e03c5282b97f" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="1101343d-2c64-4e32-b10d-2e13520ec3d3" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

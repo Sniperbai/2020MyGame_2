@@ -45,6 +45,8 @@ public class PlayerCharacter : MonoBehaviour
 
     Damageable playerDamageable;
 
+    string ResetPos;         //玩家受伤出生的点
+
     #endregion
 
     #region Unity回调
@@ -63,7 +65,7 @@ public class PlayerCharacter : MonoBehaviour
         playerDamageable.OnHurt += this.OnHurt;                   //注册受伤事件
         playerDamageable.OnDead += this.OnDead;                   //注册死亡事件
 
-        GamePanel._instance.InitHP(playerDamageable.health);
+        GamePanel.Instance.InitHP(playerDamageable.health);
     }
 
     private void Update()
@@ -266,13 +268,73 @@ public class PlayerCharacter : MonoBehaviour
 
     #region 受伤相关的方法
 
-    public void OnHurt()
+    //设置无敌状态
+    public void SetWudi(int time)
     {
-        //播放受伤动画
-        animator.SetTrigger("hurt");
+        animator.SetBool("isWudi", true);
+        playerDamageable.Disable();
+        Invoke("ResetDamageable", time);
+
+    }
+
+    public void OnHurt(HurtType hurtType ,string ResetPos)
+    {
+        this.ResetPos = ResetPos; 
+
+        switch (hurtType)
+        {
+            case HurtType.Normal:
+                //播放受伤动画
+                animator.SetTrigger("hurt");
+
+                //设置无敌状态
+                SetWudi(1);
+
+                break;
+            case HurtType.Dead:
+                //播放死亡动画
+                animator.SetBool("isDead",true);
+                animator.SetTrigger("trigger");
+                rigidbody2d.gravityScale = 0;
+                rigidbody2d.velocity = Vector2.zero;
+
+                //取消控制
+                PlayerInput.instance.SetEnable(false);
+
+                // 显示提示
+                TipMessagePanel.Instance.ShowTip(null, TipStyle.Style2);
+
+                //重置玩家位置
+                Invoke("ResetDead",1);
+                break;
+           
+        }
+
+        
 
         //更新血条
-        GamePanel._instance.UpdateHP(playerDamageable.health);
+        GamePanel.Instance.UpdateHP(playerDamageable.health);
+
+        
+    }
+
+    public void ResetDamageable()
+    {
+        playerDamageable.Enanble();
+        animator.SetBool("isWudi", false);
+    }
+
+    public void ResetDead()
+    {
+        animator.SetBool("isDead", false);
+        rigidbody2d.gravityScale = 5;
+        PlayerInput.instance.SetEnable(true);
+
+        //给他一段时间的无敌状态
+        SetWudi(2);
+
+        //设置位置
+        transform.position = GameObject.Find(ResetPos).transform.position;
     }
 
     public void OnDead()

@@ -19,8 +19,9 @@ public class InfoSign : MonoBehaviour
         if (collision.tag == "Player")
         {
             render.sprite = lighSprite;
+          
             //显示一个提示
-            TipMessagePanel._instance.ShowTip(tipContent, TipStyle.Style1);
+            TipMessagePanel.Instance.ShowTip(tipContent, TipStyle.Style1);
         }
         
     }
@@ -31,7 +32,7 @@ public class InfoSign : MonoBehaviour
         {
             render.sprite = normalSprite;
             
-            TipMessagePanel._instance.HideTip(TipStyle.Style1);
+            TipMessagePanel.Instance.HideTip(TipStyle.Style1);
         }
 
     }

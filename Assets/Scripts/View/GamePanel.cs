@@ -9,15 +9,13 @@ public class GamePanel : SingletonView<GamePanel>
     Transform hp_parent;
     GameObject[] hp_items;
 
-    private void Start()
+    protected override void Awake()
     {
+        base.Awake();
         hp_parent = transform.Find("hp");
-
-        //InitHP(5);
-        //UpdateHP(4);
-
     }
 
+    
     public void InitHP(int hp)
     {
         hp_items = new GameObject[hp];
