@@ -63,6 +63,7 @@ public class PlayerCharacter : MonoBehaviour
         playerDamageable.OnHurt += this.OnHurt;                   //注册受伤事件
         playerDamageable.OnDead += this.OnDead;                   //注册死亡事件
 
+        GamePanel._instance.InitHP(playerDamageable.health);
     }
 
     private void Update()
@@ -271,6 +272,7 @@ public class PlayerCharacter : MonoBehaviour
         animator.SetTrigger("hurt");
 
         //更新血条
+        GamePanel._instance.UpdateHP(playerDamageable.health);
     }
 
     public void OnDead()

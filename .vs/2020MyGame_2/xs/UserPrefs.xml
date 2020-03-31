@@ -1,5 +1,9 @@
 ﻿<Properties StartupConfiguration="{155432D1-7EE6-A533-C1DB-CEA9DB2B7E56}|">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Object/PlayerCharacter.cs">
+    <Files>
+      <File FileName="Assets/Scripts/View/GamePanel.cs" Line="36" Column="14" />
+      <File FileName="Assets/Scripts/Object/PlayerCharacter.cs" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -12,6 +16,7 @@
                   <Node name="PlayerCharacter.cs" selected="True" />
                 </Node>
                 <Node name="Other" expanded="True" />
+                <Node name="View" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -21,7 +26,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7381ce04-c8c9-4a44-99d0-264e2e6ea898" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e13851ae-010f-404b-a5c2-e03c5282b97f" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
