@@ -7,11 +7,16 @@ using System;
 public class Damageable : MonoBehaviour
 {
     public int health;    //生命值
-
+    int defaultHealth;    //默认的生命值
     public Action<HurtType,string> OnHurt;  //
     public Action OnDead;  //
 
     public bool isEnable = true ;
+
+    private void Start()
+    {
+        defaultHealth = health;
+    }
 
     public void Enanble()
     {
@@ -27,6 +32,7 @@ public class Damageable : MonoBehaviour
     public void TakeDamage(int damage,HurtType hurtType,string ResetPos)
     {
         if (isEnable == false) { return; }  //不可用的状态
+        if (health < 0){ return; }          //已经死亡了
 
         //血量要减少
         health--;
@@ -56,6 +62,13 @@ public class Damageable : MonoBehaviour
         //判断血量是不是为0
 
 
+    }
+
+    //重置
+    public void ResetHealth()
+    {
+        this.health = defaultHealth;
+        Enanble();
     }
 }
 

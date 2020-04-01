@@ -277,6 +277,24 @@ public class PlayerCharacter : MonoBehaviour
 
     }
 
+    //设置死亡的状态
+    public void SetDead()
+    {
+        //播放死亡动画
+        animator.SetBool("isDead", true);
+        animator.SetTrigger("trigger");
+        rigidbody2d.gravityScale = 0;
+        rigidbody2d.velocity = Vector2.zero;
+
+        //取消控制
+        PlayerInput.instance.SetEnable(false);
+
+        // 显示提示
+        TipMessagePanel.Instance.ShowTip(null, TipStyle.Style2);
+
+
+    }
+
     public void OnHurt(HurtType hurtType ,string ResetPos)
     {
         this.ResetPos = ResetPos; 
@@ -293,16 +311,7 @@ public class PlayerCharacter : MonoBehaviour
                 break;
             case HurtType.Dead:
                 //播放死亡动画
-                animator.SetBool("isDead",true);
-                animator.SetTrigger("trigger");
-                rigidbody2d.gravityScale = 0;
-                rigidbody2d.velocity = Vector2.zero;
-
-                //取消控制
-                PlayerInput.instance.SetEnable(false);
-
-                // 显示提示
-                TipMessagePanel.Instance.ShowTip(null, TipStyle.Style2);
+                SetDead();
 
                 //重置玩家位置
                 Invoke("ResetDead",1);
@@ -331,7 +340,7 @@ public class PlayerCharacter : MonoBehaviour
         PlayerInput.instance.SetEnable(true);
 
         //给他一段时间的无敌状态
-        SetWudi(2);
+        SetWudi(1);
 
         //设置位置
         transform.position = GameObject.Find(ResetPos).transform.position;
@@ -339,9 +348,28 @@ public class PlayerCharacter : MonoBehaviour
 
     public void OnDead()
     {
-        //播放死亡动画
+        Debug.Log("游戏结束");
 
-        //返回菜单
+        //设置成死亡状态
+        SetDead();
+
+        Invoke("DelayShowGameOverPanel",1);
+        //更新血条
+        GamePanel.Instance.UpdateHP(playerDamageable.health);
+
+    }
+
+    public void DelayShowGameOverPanel()
+    {
+        //显示游戏结束的界面
+        TipMessagePanel.Instance.ShowTip(null, TipStyle.Style3);
+        ResetPos = "Spawn1";
+        //重置死亡状态
+        ResetDead();
+
+        //重置 Hp
+        GamePanel.Instance.ResetHP();
+        playerDamageable.ResetHealth();
     }
 
     public void Attack()

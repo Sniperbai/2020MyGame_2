@@ -7,6 +7,7 @@ public enum TipStyle
 {
     Style1,  //位于屏幕下方的提示
     Style2,  //全黑的样式
+    Style3,  //游戏结束的时候显示
 }
 
 public class TipMessagePanel : SingletonView<TipMessagePanel>
@@ -15,6 +16,7 @@ public class TipMessagePanel : SingletonView<TipMessagePanel>
 
     GameObject style1Obj;
     GameObject style2Obj;
+    GameObject style3Obj;
 
     #endregion
 
@@ -28,6 +30,9 @@ public class TipMessagePanel : SingletonView<TipMessagePanel>
 
         style2Obj = transform.Find("Style2").gameObject;
         style2Obj.SetActive(false);
+
+        style3Obj = transform.Find("Style3").gameObject;
+        style3Obj.SetActive(false);
     }
 
 
@@ -51,6 +56,11 @@ public class TipMessagePanel : SingletonView<TipMessagePanel>
                 //1.5秒后隐藏
                 Invoke("HideTipStyle2",1.5f);
                 break;
+            case TipStyle.Style3:
+                style3Obj.SetActive(true);
+                //2秒之后自动隐藏
+                Invoke("HideTipStyle3", 2f);
+                break;
         }
 
 
@@ -59,6 +69,13 @@ public class TipMessagePanel : SingletonView<TipMessagePanel>
     public void HideTipStyle2()
     {
         HideTip(TipStyle.Style2);
+    }
+
+    public void HideTipStyle3()
+    {
+        HideTip(TipStyle.Style3);
+
+
     }
 
     public void HideTip(TipStyle tipStyle)
@@ -73,6 +90,10 @@ public class TipMessagePanel : SingletonView<TipMessagePanel>
                 break;
             case TipStyle.Style2:
                 style2Obj.SetActive(false);
+                break;
+
+            case TipStyle.Style3:
+                style3Obj.SetActive(false);
                 break;
         }
 
