@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+public enum MovingType
+{
+   Horizontal,  //水平方向
+   Vertical     //垂直方向
+}
+
 public class MovingPlatform : MonoBehaviour
 {
     //开始的位置
@@ -10,6 +16,8 @@ public class MovingPlatform : MonoBehaviour
 
     //结束的位置
     public Vector3 endPos;
+
+    public MovingType movingType = MovingType.Horizontal;
 
     //当前移动的速度
     public float speed;
@@ -34,7 +42,15 @@ public class MovingPlatform : MonoBehaviour
 
         for (int i = 0; i < count; i++)
         {
-            contactPoint[i].rigidbody.velocity += new Vector2(isMoveToEnd? speed:-speed, 0);
+            if (movingType == MovingType.Horizontal)
+            {
+                contactPoint[i].rigidbody.velocity += new Vector2(isMoveToEnd ? speed : -speed, 0);
+            }
+            else
+            {
+                //contactPoint[i].rigidbody.velocity += new Vector2(0, isMoveToEnd ? speed : -speed);
+            }
+            
         }
     }
 
