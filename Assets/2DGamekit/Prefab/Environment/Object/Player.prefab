@@ -113,6 +113,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -223,6 +224,21 @@ MonoBehaviour:
   currentStatus: 0
   followTargetOffset: {x: 2, y: 0, z: 0}
   startCheckPos: {fileID: 1358285036}
+  ContactFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  count: 0
 --- !u!114 &440916406678147995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,4 +264,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6dae3c98a5734cd09c48bdccadff493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
+  health: 2
+  isEnable: 1
