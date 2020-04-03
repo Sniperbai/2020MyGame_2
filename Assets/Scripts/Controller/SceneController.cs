@@ -4,23 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneController
+public class SceneController : Singleton<SceneController>
 {
-    public static SceneController _instance;
-
-    public static SceneController Instance
-    {
-        get
-        {
-            if (_instance == null)
-            {
-                _instance = new SceneController();
-            }
-
-            return _instance;
-        }
-
-    }
 
     public  AsyncOperation currentLoadOperation;    //加载的信息
 
@@ -44,13 +29,19 @@ public class SceneController
         currentLoadOperation.completed += onComplete;
     }
 
-    public void LoadScene(int target, string objName, string posName)
+    public void LoadScene(int target, string objName, string posName, bool isFlipX = false )
     {
         LoadScene(target, (asyncOperation) => {
             GameObject gameObject = GameObject.Find(objName);
             GameObject posObject = GameObject. Find(posName);
 
             gameObject.transform.position = posObject.transform.position;
+            gameObject.transform.rotation = posObject.transform.rotation;
+
+            if (gameObject.GetComponent<SpriteRenderer>() != null)
+            {
+                gameObject.GetComponent<SpriteRenderer>().flipX = isFlipX;
+            }
         });
     }
 }

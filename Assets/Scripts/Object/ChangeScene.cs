@@ -9,6 +9,7 @@ public class ChangeScene :MonoBehaviour
 
     public string posName;     //游戏物体的位置的名称
     public string objName;    //需要设置位置的游戏物体
+    public bool isFlip;       //是不是需要翻转
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -22,7 +23,7 @@ public class ChangeScene :MonoBehaviour
             }
             else
             {
-                SceneController.Instance.LoadScene( targetScene, objName, posName);
+                SceneController.Instance.LoadScene( targetScene, objName, posName,isFlip);
             }
 
             
