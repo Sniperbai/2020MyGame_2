@@ -9,20 +9,20 @@ public class Data
 
 public class Data<T> : Data 
 {
-    public T valuy1;
+    public T value1;
 }
 
 public class Data<T,T1> : Data
 {
-    public T valuy1;
-    public T1 valuy2;
+    public T value1;
+    public T1 value2;
 }
 
 public class Data<T,T1,T2> : Data
 {
-    public T valuy1;
-    public T1 valuy2;
-    public T2 valuy3;
+    public T value1;
+    public T1 value2;
+    public T2 value3;
 }
 
 public class DataManager : Singleton<DataManager>

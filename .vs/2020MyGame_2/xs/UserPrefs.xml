@@ -1,13 +1,14 @@
 ﻿<Properties StartupConfiguration="{155432D1-7EE6-A533-C1DB-CEA9DB2B7E56}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Manager/DataManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/Manager/DataManager.cs" Line="28" Column="50" />
+      <File FileName="Assets/Scripts/Manager/DataManager.cs" Line="41" Column="31" />
       <File FileName="Assets/Scripts/Const/DataConst.cs" />
       <File FileName="Assets/Scripts/Object/ChangeScene.cs" />
       <File FileName="Assets/Scripts/Controller/SceneController.cs" />
       <File FileName="Assets/Scripts/Controller/Damage.cs" />
       <File FileName="Assets/Scripts/Controller/Damageable.cs" />
       <File FileName="Assets/Scripts/Object/PassPlatform.cs" />
+      <File FileName="Assets/Scripts/Object/WeaponPickup.cs" Line="22" Column="34" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
