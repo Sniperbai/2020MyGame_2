@@ -25,7 +25,7 @@ public class Data<T,T1,T2> : Data
     public T2 valuy3;
 }
 
-public class DataManager : Singleton<DateManager>
+public class DataManager : Singleton<DataManager>
 {
     Dictionary<string, Data> datas = new Dictionary<string, Data>();
 
