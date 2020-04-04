@@ -39,8 +39,17 @@ public class WeaponPickup : MonoBehaviour
             Data<bool> data = new Data<bool>();
             data.value1 = true;
             DataManager.Instance.SaveData(DataConst.is_have_weapon, data);
+
+            TipMessagePanel.Instance.ShowTip("恭喜你白雨睿获得一把神器,可以按 K 或 O 进行攻击！",TipStyle.Style1);
+            Invoke("HideTip",2);
+            this.GetComponent<BoxCollider2D>().enabled = false;
         }
         
+    }
+
+    public void HideTip()
+    {
+        TipMessagePanel.Instance.HideTip(TipStyle.Style1);
     }
 
 

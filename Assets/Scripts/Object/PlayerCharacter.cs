@@ -11,6 +11,12 @@ public enum PlayerStatus {
 
 }
 
+public enum AttackType
+{
+    Attack = 0,    //普通攻击
+    Shoot = 1       //射击
+}
+
 
 public class PlayerCharacter : MonoBehaviour
 {
@@ -46,6 +52,9 @@ public class PlayerCharacter : MonoBehaviour
     Damageable playerDamageable;
 
     string ResetPos;         //玩家受伤出生的点
+
+    float attackTime = 1;        //攻击的冷却时间
+    bool attackIsReady = true;      //是否冷却好了
 
     #endregion
 
@@ -193,6 +202,17 @@ public class PlayerCharacter : MonoBehaviour
             }
         }
 
+        //普通攻击
+        if (PlayerInput.instance.Attack.Down || PlayerInput.instance.Attack.Hold)
+        {
+            Attack(AttackType.Attack);
+        }
+
+        //射击
+        if (PlayerInput.instance.Shoot.Down || PlayerInput.instance.Shoot.Hold)
+        {
+            Attack(AttackType.Shoot);
+        }
 
     }
 
@@ -264,6 +284,41 @@ public class PlayerCharacter : MonoBehaviour
 
     }
 
+    public void Attack(AttackType attackType)
+    {
+        if (!IsHaveWeapon()) return;         //没有武器不能攻击
+
+        if (!attackIsReady) { return; }      //技能还没有冷却完成
+
+        //判断有没有武器
+
+
+        Debug.Log("攻击:" + attackType);
+
+        animator.SetTrigger("attack");
+        animator.SetTrigger("trigger");
+        animator.SetInteger("attackType",(int)attackType);
+
+        attackIsReady = false;
+        Invoke("ResetAttackIsReady", attackTime);
+    }
+
+    public void ResetAttackIsReady()
+    {
+        attackIsReady = true;
+    }
+
+    //是否有武器
+    public bool IsHaveWeapon()
+    {
+        Data data = DataManager.Instance.GetData(DataConst.is_have_weapon);
+        if(data != null && ((Data<bool>)data).value1)
+        {
+            return true;
+        }
+        
+        return false;
+    }
     #endregion
 
     #region 受伤相关的方法
@@ -372,7 +427,8 @@ public class PlayerCharacter : MonoBehaviour
         playerDamageable.ResetHealth();
     }
 
-    public void Attack()
+    //造成伤害
+    public void AttackDamage()
     {
 
     }
