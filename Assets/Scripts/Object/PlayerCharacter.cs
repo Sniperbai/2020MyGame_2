@@ -49,13 +49,19 @@ public class PlayerCharacter : MonoBehaviour
     RaycastHit2D[] m_HitBuffer = new RaycastHit2D[5];
     public int count;
 
-    Damageable playerDamageable;
+    Damageable playerDamageable;        //可受伤的
+    Damage playerDamage;               //对别的游戏物体造成伤害
 
     string ResetPos;         //玩家受伤出生的点
 
-    float attackTime = 1;        //攻击的冷却时间
+    float attackTime = 0.4f;        //攻击的冷却时间
     bool attackIsReady = true;      //是否冷却好了
 
+    float setSpeedXTime;            //设置 x 方向速度的时间
+    float setSpeedXTimer;            //设置 x 方向速度的计时器
+    float setSpeedX;                //速度的大小
+
+    AttackRange attackRange;          //人物攻击的范围
     #endregion
 
     #region Unity回调
@@ -75,12 +81,15 @@ public class PlayerCharacter : MonoBehaviour
         playerDamageable.OnDead += this.OnDead;                   //注册死亡事件
 
         GamePanel.Instance.InitHP(playerDamageable.health);
+        attackRange = transform.Find("attackRange").GetComponent<AttackRange>();
     }
 
     private void Update()
     {
 
         UpdateVelocity();    //更新速度
+
+        UpdateSetSpeedXWithTime();  
 
         CheckGround();       //检测是否在地面
 
@@ -115,15 +124,35 @@ public class PlayerCharacter : MonoBehaviour
         if (x < 0)
         {
             spriteRenderer.flipX = true;
+            attackRange.transform.localPosition = new Vector3(-1.115f,attackRange.transform.localPosition.y,0);
+
         }
         else if ( x > 0 )
         {
             spriteRenderer.flipX = false;
+            attackRange.transform.localPosition = new Vector3(1.115f, attackRange.transform.localPosition.y, 0);
+
         }
 
         if (currentStatus == PlayerStatus.Crouch) x = 0;
 
         rigidbody2d.velocity = new Vector2(x,rigidbody2d.velocity.y);
+    }
+
+    public void UpdateSetSpeedXWithTime()
+    {
+        setSpeedXTimer += Time.deltaTime;
+        if (setSpeedXTimer < setSpeedXTime)
+        {
+            rigidbody2d.velocity = new Vector2(setSpeedX, rigidbody2d.velocity.y);
+        }
+    }
+
+    public void SetSpeedXWithTime(float x, float time)
+    {
+        setSpeedXTime = time;
+        setSpeedXTimer = 0;
+        setSpeedX = x;
     }
 
     //设置Y方向的速度
@@ -290,14 +319,13 @@ public class PlayerCharacter : MonoBehaviour
 
         if (!attackIsReady) { return; }      //技能还没有冷却完成
 
-        //判断有没有武器
-
-
         Debug.Log("攻击:" + attackType);
 
         animator.SetTrigger("attack");
         animator.SetTrigger("trigger");
         animator.SetInteger("attackType",(int)attackType);
+
+        SetSpeedXWithTime(spriteRenderer.flipX?-7:7,0.2f);
 
         attackIsReady = false;
         Invoke("ResetAttackIsReady", attackTime);
@@ -430,6 +458,13 @@ public class PlayerCharacter : MonoBehaviour
     //造成伤害
     public void AttackDamage()
     {
+        //获取到所有攻击的游戏物体
+        GameObject[] damageables = attackRange.GetDamageableGameObjects();
+        if (damageables != null && damageables.Length != 0)
+        {
+            //对这些游戏物体造成伤害
+            playerDamage.OnDamage(damageables);
+        }
 
     }
 
