@@ -8,8 +8,8 @@
       <File FileName="Assets/Scripts/Controller/Damage.cs" />
       <File FileName="Assets/Scripts/Controller/Damageable.cs" />
       <File FileName="Assets/Scripts/Object/PassPlatform.cs" />
-      <File FileName="Assets/Scripts/Object/WeaponPickup.cs" />
-      <File FileName="Assets/Scripts/Object/PlayerCharacter.cs" Line="101" Column="5" />
+      <File FileName="Assets/Scripts/Object/WeaponPickup.cs" Line="46" Column="10" />
+      <File FileName="Assets/Scripts/Object/PlayerCharacter.cs" Line="303" Column="50" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
