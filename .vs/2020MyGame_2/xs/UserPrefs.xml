@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{155432D1-7EE6-A533-C1DB-CEA9DB2B7E56}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Object/PlayerCharacter.cs">
     <Files>
-      <File FileName="Assets/Scripts/Object/PlayerCharacter.cs" Line="288" Column="5" />
-      <File FileName="Assets/Scripts/Other/AttackRange.cs" Line="38" Column="10" />
+      <File FileName="Assets/Scripts/Object/PlayerCharacter.cs" Line="337" Column="31" />
+      <File FileName="Assets/Scripts/Other/AttackRange.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

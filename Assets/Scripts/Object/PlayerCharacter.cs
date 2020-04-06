@@ -325,7 +325,14 @@ public class PlayerCharacter : MonoBehaviour
         animator.SetTrigger("trigger");
         animator.SetInteger("attackType",(int)attackType);
 
-        SetSpeedXWithTime(spriteRenderer.flipX?-7:7,0.2f);
+        if (attackType == AttackType.Attack)
+        {
+            SetSpeedXWithTime(spriteRenderer.flipX ? -7 : 7, 0.2f);
+        }
+        else
+        {
+            animator.SetFloat("shoot",1);
+        }
 
         attackIsReady = false;
         Invoke("ResetAttackIsReady", attackTime);
@@ -334,6 +341,7 @@ public class PlayerCharacter : MonoBehaviour
     public void ResetAttackIsReady()
     {
         attackIsReady = true;
+        animator.SetFloat("shoot",0);
     }
 
     //是否有武器
