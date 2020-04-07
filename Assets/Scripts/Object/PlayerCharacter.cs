@@ -62,6 +62,8 @@ public class PlayerCharacter : MonoBehaviour
     float setSpeedX;                //速度的大小
 
     AttackRange attackRange;          //人物攻击的范围
+    Transform bulletSpawnPos;         //子弹生成的位置
+    GameObject bulletPrefab;          //子弹的预制体
     #endregion
 
     #region Unity回调
@@ -82,6 +84,8 @@ public class PlayerCharacter : MonoBehaviour
 
         GamePanel.Instance.InitHP(playerDamageable.health);
         attackRange = transform.Find("attackRange").GetComponent<AttackRange>();
+
+        bulletSpawnPos = transform.Find("bulletSpawnPos");
     }
 
     private void Update()
@@ -333,10 +337,29 @@ public class PlayerCharacter : MonoBehaviour
         {
             animator.SetFloat("shoot",1);
             //创建一个子弹
+            Invoke("CreateBullet",0.02f);
         }
 
         attackIsReady = false;
         Invoke("ResetAttackIsReady", attackTime);
+    }
+
+    //创建一个子弹
+    void CreateBullet()
+    {
+        if (bulletPrefab == null)
+        {
+            bulletPrefab = Resources.Load<GameObject>("Prefabs/Object/Bullet");
+        }
+        GameObject gameObject = GameObject.Instantiate(bulletPrefab);
+
+        if (spriteRenderer.flipX)
+        {
+            bulletSpawnPos.localPosition = new Vector3(-bulletSpawnPos.localPosition.x, bulletSpawnPos.localPosition.y, bulletSpawnPos.localPosition.z);
+        }
+
+        gameObject.transform.position = bulletSpawnPos.position;
+        gameObject.GetComponent<Bullet>().SetDirection(!spriteRenderer.flipX);
     }
 
     public void ResetAttackIsReady()
