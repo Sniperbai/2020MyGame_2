@@ -332,6 +332,7 @@ public class PlayerCharacter : MonoBehaviour
         else
         {
             animator.SetFloat("shoot",1);
+            //创建一个子弹
         }
 
         attackIsReady = false;

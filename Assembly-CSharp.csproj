@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\Controller\Damageable.cs" />
     <Compile Include="Assets\Scripts\Controller\SceneController.cs" />
     <Compile Include="Assets\Scripts\Manager\DataManager.cs" />
+    <Compile Include="Assets\Scripts\Object\Bullet.cs" />
     <Compile Include="Assets\Scripts\Object\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\Object\HubDoor.cs" />
     <Compile Include="Assets\Scripts\Object\InfoSign.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Assets\Scripts\Object\PassPlatform.cs" />
     <Compile Include="Assets\Scripts\Object\PlayerCharacter.cs" />
     <Compile Include="Assets\Scripts\Object\PlayerInput.cs" />
+    <Compile Include="Assets\Scripts\Object\SetMaterialRenderQueue.cs" />
     <Compile Include="Assets\Scripts\Object\Water.cs" />
     <Compile Include="Assets\Scripts\Object\WeaponPickup.cs" />
     <Compile Include="Assets\Scripts\Other\AttackRange.cs" />
