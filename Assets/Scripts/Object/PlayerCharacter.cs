@@ -78,6 +78,7 @@ public class PlayerCharacter : MonoBehaviour
         followTarget.position = transform.position + followTargetOffset;
         startCheckPos = transform.Find("startCheckPos");
 
+        playerDamage = transform.GetComponent<Damage>();
         playerDamageable = transform.GetComponent<Damageable>();  //初始化受伤功能
         playerDamageable.OnHurt += this.OnHurt;                   //注册受伤事件
         playerDamageable.OnDead += this.OnDead;                   //注册死亡事件
@@ -86,6 +87,7 @@ public class PlayerCharacter : MonoBehaviour
         attackRange = transform.Find("attackRange").GetComponent<AttackRange>();
 
         bulletSpawnPos = transform.Find("bulletSpawnPos");
+
     }
 
     private void Update()
