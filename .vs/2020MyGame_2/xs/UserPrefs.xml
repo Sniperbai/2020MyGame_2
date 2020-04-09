@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{155432D1-7EE6-A533-C1DB-CEA9DB2B7E56}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Object/PlayerCharacter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Object/Chomper.cs">
     <Files>
       <File FileName="Assets/Scripts/Object/PlayerCharacter.cs" Line="81" Column="57" />
-      <File FileName="Assets/Scripts/Other/AttackRange.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Object/SetMaterialRenderQueue.cs" Line="12" Column="1" />
+      <File FileName="Assets/Scripts/Other/AttackRange.cs" />
+      <File FileName="Assets/Scripts/Object/SetMaterialRenderQueue.cs" />
       <File FileName="Assets/Scripts/Object/Bullet.cs" Line="51" Column="35" />
       <File FileName="Assets/Scripts/Object/DestructibleColumn.cs" Line="22" Column="66" />
+      <File FileName="Assets/Scripts/Object/Chomper.cs" Line="86" Column="18" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,7 +18,7 @@
                 <Node name="Controller" expanded="True" />
                 <Node name="Manager" expanded="True" />
                 <Node name="Object" expanded="True">
-                  <Node name="PlayerCharacter.cs" selected="True" />
+                  <Node name="Chomper.cs" selected="True" />
                 </Node>
                 <Node name="Other" expanded="True" />
                 <Node name="View" expanded="True" />
