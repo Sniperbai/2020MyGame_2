@@ -9,7 +9,7 @@ public class Damageable : MonoBehaviour
     public int health;    //生命值
     int defaultHealth;    //默认的生命值
     public Action<HurtType,string> OnHurt;  //
-    public Action OnDead;  //
+    public Action<string> OnDead;  //
 
     public bool isEnable = true ;
 
@@ -41,7 +41,7 @@ public class Damageable : MonoBehaviour
             //死掉了
             if (OnDead != null)
             {
-                OnDead();
+                OnDead(ResetPos);
             }
             
             

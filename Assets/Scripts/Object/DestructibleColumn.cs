@@ -15,7 +15,7 @@ public class DestructibleColumn : MonoBehaviour
         damageable.OnDead += this.OnDead;
     }
 
-    public void OnDead()
+    public void OnDead(string ResetPos)
     {
         destoryObj.SetActive(true);
         transform.GetComponent<BoxCollider2D>().enabled = false;

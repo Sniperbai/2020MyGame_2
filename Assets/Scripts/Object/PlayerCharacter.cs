@@ -392,6 +392,9 @@ public class PlayerCharacter : MonoBehaviour
         playerDamageable.Disable();
         Invoke("ResetDamageable", time);
 
+        //不会跟敌人层发生碰撞 
+        Physics2D.SetLayerCollisionMask(LayerMask.NameToLayer("player"), ~LayerMask.GetMask("enemy", "IgnorePlayer"));
+
     }
 
     //设置死亡的状态
@@ -448,6 +451,8 @@ public class PlayerCharacter : MonoBehaviour
     {
         playerDamageable.Enanble();
         animator.SetBool("isWudi", false);
+        //可以跟敌人层发生碰撞 
+        Physics2D.SetLayerCollisionMask(LayerMask.NameToLayer("player"), LayerMask.GetMask("enemy", "player"));
     }
 
     public void ResetDead()
@@ -463,9 +468,10 @@ public class PlayerCharacter : MonoBehaviour
         transform.position = GameObject.Find(ResetPos).transform.position;
     }
 
-    public void OnDead()
+    public void OnDead(string resetPos)
     {
-        Debug.Log("游戏结束");
+        ResetPos = resetPos;
+        //Debug.Log("游戏结束");
 
         //设置成死亡状态
         SetDead();
@@ -480,7 +486,7 @@ public class PlayerCharacter : MonoBehaviour
     {
         //显示游戏结束的界面
         TipMessagePanel.Instance.ShowTip(null, TipStyle.Style3);
-        ResetPos = "Spawn1";
+        //ResetPos = "Spawn1";
         //重置死亡状态
         ResetDead();
 
