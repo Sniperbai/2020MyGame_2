@@ -43,4 +43,9 @@ public class DataManager : Singleton<DataManager>
 
         return null;
     }
+
+    public bool IsContainsData(string key)
+    {
+        return datas.ContainsKey(key);
+    }
 }

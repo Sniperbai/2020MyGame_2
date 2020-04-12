@@ -83,7 +83,19 @@ public class PlayerCharacter : MonoBehaviour
         playerDamageable.OnHurt += this.OnHurt;                   //注册受伤事件
         playerDamageable.OnDead += this.OnDead;                   //注册死亡事件
 
-        GamePanel.Instance.InitHP(playerDamageable.health);
+        //只更新一次
+        if (!DataManager.Instance.IsContainsData(DataConst.hp))
+        {
+            //保存最大的血量值
+            SaveMaxHp(playerDamageable.health);
+            UpdateHpData(playerDamageable.health);
+        }
+        else
+        {
+            playerDamageable.health = GetHpFromData();   //设置血量
+        }
+        
+        GamePanel.Instance.InitHP(GetMaxHp(), GetHpFromData());
         attackRange = transform.Find("attackRange").GetComponent<AttackRange>();
 
         bulletSpawnPos = transform.Find("bulletSpawnPos");
@@ -381,6 +393,45 @@ public class PlayerCharacter : MonoBehaviour
         
         return false;
     }
+
+    //更新血量数据
+    public void UpdateHpData(int hp)
+    {
+        Data data = DataManager.Instance.GetData(DataConst.hp);
+        if (data == null)
+        {
+            data = new Data<int>();
+            ((Data<int>)data).value1 = hp;
+            DataManager.Instance.SaveData(DataConst.hp, data);
+        }
+        else
+        {
+            ((Data<int>)data).value1 = hp;
+        }
+    }
+
+    //获取血量
+    public int GetHpFromData()
+    {
+        Data<int> data = (Data<int>)DataManager.Instance.GetData(DataConst.hp);
+        return data.value1;
+    }
+
+    //保存血量上限
+    public void SaveMaxHp(int maxHp)
+    {
+        Data<int> data = new Data<int>();
+        data.value1 = maxHp;
+        DataManager.Instance.SaveData(DataConst.maxHp,data);
+    }
+
+    //获取血量上限
+    public int GetMaxHp()
+    {
+        Data<int> data =(Data<int>) DataManager.Instance.GetData(DataConst.maxHp);
+        return data.value1;
+    }
+
     #endregion
 
     #region 受伤相关的方法
@@ -417,6 +468,9 @@ public class PlayerCharacter : MonoBehaviour
 
     public void OnHurt(HurtType hurtType ,string ResetPos)
     {
+        //更新内存数据
+        UpdateHpData(playerDamageable.health);
+
         this.ResetPos = ResetPos; 
 
         switch (hurtType)
@@ -442,7 +496,7 @@ public class PlayerCharacter : MonoBehaviour
         
 
         //更新血条
-        GamePanel.Instance.UpdateHP(playerDamageable.health);
+        GamePanel.Instance.UpdateHP(GetHpFromData());
 
         
     }
@@ -452,7 +506,7 @@ public class PlayerCharacter : MonoBehaviour
         playerDamageable.Enanble();
         animator.SetBool("isWudi", false);
         //可以跟敌人层发生碰撞 
-        Physics2D.SetLayerCollisionMask(LayerMask.NameToLayer("player"), LayerMask.GetMask("enemy", "player"));
+        Physics2D.SetLayerCollisionMask(LayerMask.NameToLayer("player"), ~LayerMask.GetMask("IgnorePlayer"));
     }
 
     public void ResetDead()
@@ -478,7 +532,7 @@ public class PlayerCharacter : MonoBehaviour
 
         Invoke("DelayShowGameOverPanel",1);
         //更新血条
-        GamePanel.Instance.UpdateHP(playerDamageable.health);
+        GamePanel.Instance.UpdateHP(GetHpFromData());
 
     }
 

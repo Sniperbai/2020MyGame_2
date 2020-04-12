@@ -9599,12 +9599,12 @@ PrefabInstance:
     - target: {fileID: 440916406678147999, guid: cb8df5edbb5664208a777669df5106a5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40.56
+      value: 37.82
       objectReference: {fileID: 0}
     - target: {fileID: 440916406678147999, guid: cb8df5edbb5664208a777669df5106a5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.08
+      value: 10.02
       objectReference: {fileID: 0}
     - target: {fileID: 440916406678147999, guid: cb8df5edbb5664208a777669df5106a5,
         type: 3}
@@ -11507,6 +11507,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1734563045 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 440916406678147999, guid: cb8df5edbb5664208a777669df5106a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 344479786}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1744225612 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 440916406192967275, guid: cb8df5edbb5664208a777669df5106a5,
@@ -27419,6 +27425,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5166229637011182129, guid: 5e5ecbca1f9be43518e4398ab0e096b0,
+        type: 3}
+      propertyPath: attackTarget
+      value: 
+      objectReference: {fileID: 1734563045}
     - target: {fileID: 5166229637011182131, guid: 5e5ecbca1f9be43518e4398ab0e096b0,
         type: 3}
       propertyPath: m_LocalPosition.x

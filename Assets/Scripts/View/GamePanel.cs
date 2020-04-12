@@ -16,7 +16,7 @@ public class GamePanel : SingletonView<GamePanel>
     }
 
     
-    public void InitHP(int hp)
+    public void InitHP(int hp,int currentHp)
     {
         hp_items = new GameObject[hp];
         for (int i = 0; i < hp; i++)
@@ -24,6 +24,7 @@ public class GamePanel : SingletonView<GamePanel>
             //hp_item
             hp_items[i] = GameObject.Instantiate(hp_item_prefab, hp_parent);
         }
+        UpdateHP(currentHp);
     }
 
     public void UpdateHP(int hp)
