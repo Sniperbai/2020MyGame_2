@@ -231,7 +231,7 @@ public class Chomper : MonoBehaviour
        
     }
 
-    public void TakeDamage()
+    public void OnAttack()
     {
         damage.OnDamage(attackTarget.gameObject);
     }

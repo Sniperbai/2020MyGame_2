@@ -6,7 +6,9 @@
       <File FileName="Assets/Scripts/Object/SetMaterialRenderQueue.cs" />
       <File FileName="Assets/Scripts/Object/Bullet.cs" />
       <File FileName="Assets/Scripts/Object/DestructibleColumn.cs" Line="24" Column="6" />
-      <File FileName="Assets/Scripts/Object/Chomper.cs" Line="228" Column="6" />
+      <File FileName="Assets/Scripts/Object/Chomper.cs" Line="242" Column="40" />
+      <File FileName="Assets/Scripts/Object/MovingPlatform.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controller/Damage.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
