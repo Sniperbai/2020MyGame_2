@@ -64,6 +64,9 @@ public class PlayerCharacter : MonoBehaviour
     AttackRange attackRange;          //人物攻击的范围
     Transform bulletSpawnPos;         //子弹生成的位置
     GameObject bulletPrefab;          //子弹的预制体
+
+    public bool defaultHaveWeapon;    //默认是否有武器
+
     #endregion
 
     #region Unity回调
@@ -99,6 +102,15 @@ public class PlayerCharacter : MonoBehaviour
         attackRange = transform.Find("attackRange").GetComponent<AttackRange>();
 
         bulletSpawnPos = transform.Find("bulletSpawnPos");
+
+        //判断默认是不是有武器(初始化武器)
+        if (defaultHaveWeapon)
+        {
+            //对数据进行保存
+            Data<bool> data = new Data<bool>();
+            data.value1 = true;
+            DataManager.Instance.SaveData(DataConst.is_have_weapon, data);
+        }
 
     }
 
