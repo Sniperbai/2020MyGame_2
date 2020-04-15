@@ -1,22 +1,17 @@
 ﻿<Properties StartupConfiguration="{155432D1-7EE6-A533-C1DB-CEA9DB2B7E56}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Const/TagConst.cs">
-    <Files>
-      <File FileName="Assets/Scripts/Object/PlayerCharacter.cs" Line="339" Column="112" />
-      <File FileName="Assets/Scripts/Object/Pushable.cs" Line="19" Column="54" />
-      <File FileName="Assets/Scripts/Const/TagConst.cs" Line="10" Column="7" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="2020MyGame_2" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Const" expanded="True">
-                  <Node name="TagConst.cs" selected="True" />
-                </Node>
+                <Node name="Const" expanded="True" />
                 <Node name="Controller" expanded="True" />
                 <Node name="Manager" expanded="True" />
-                <Node name="Object" expanded="True" />
+                <Node name="Object" expanded="True">
+                  <Node name="PlayerCharacter.cs" selected="True" />
+                </Node>
                 <Node name="Other" expanded="True" />
                 <Node name="View" expanded="True" />
               </Node>
