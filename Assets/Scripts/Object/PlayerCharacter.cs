@@ -67,6 +67,11 @@ public class PlayerCharacter : MonoBehaviour
 
     public bool defaultHaveWeapon;    //默认是否有武器
 
+    //推物体相关的变量
+    public ContactFilter2D pushContactFilter;
+    public ContactPoint2D[] pushContactPoint = new ContactPoint2D[5];
+    public Pushable currentPushable;         //当前正在推的游戏物体
+
     #endregion
 
     #region Unity回调
@@ -128,6 +133,8 @@ public class PlayerCharacter : MonoBehaviour
         UpdateAnimator();    //更新动画
 
         UpdateFollowTargetPos();
+
+        CheckPushableObj();
 
     }
 
@@ -326,7 +333,10 @@ public class PlayerCharacter : MonoBehaviour
         SetSpeedX(PlayerInput.instance.Horizontal.value * speedX);
 
         //更新y方向速度
-        if (UpdateJump()) SetSpeedY(speedY); 
+        if (UpdateJump()) SetSpeedY(speedY);
+
+        //更新当前推的游戏物体的速度
+        if (currentPushable != null) currentPushable.Move(PlayerInput.instance.Horizontal.value * speedX * 0.2f);
     }
 
     //更新跟随位置
@@ -442,6 +452,32 @@ public class PlayerCharacter : MonoBehaviour
     {
         Data<int> data =(Data<int>) DataManager.Instance.GetData(DataConst.maxHp);
         return data.value1;
+    }
+
+    //检查可以推的游戏物体
+    public void CheckPushableObj()
+    {
+        int count = rigidbody2d.GetContacts(pushContactFilter, pushContactPoint);
+        Debug.Log(count);
+        if (count == 0) { currentPushable = null; return; }
+
+        for (int i = 0; i < count; i++)
+        {
+            if (pushContactPoint[i].rigidbody != null)
+            {
+                if (pushContactPoint[i].rigidbody.gameObject.tag == TagConst.pushable)
+                {
+                    currentPushable = pushContactPoint[i].rigidbody.transform.GetComponent<Pushable>();
+                    break;
+                }
+                else
+                {
+                    currentPushable = null;
+                }
+
+            }
+
+        }
     }
 
     #endregion

@@ -499,9 +499,10 @@ GameObject:
   - component: {fileID: 531744536}
   - component: {fileID: 531744535}
   - component: {fileID: 531744534}
+  - component: {fileID: 531744538}
   m_Layer: 8
   m_Name: PushableBox
-  m_TagString: Untagged
+  m_TagString: pushable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -521,7 +522,7 @@ Rigidbody2D:
   m_Mass: 20
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_Material: {fileID: 6200000, guid: b7437495bc5c74e5190748e4e4225cc6, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -617,6 +618,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &531744538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531744533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a1af35075094401951d93758ffe566, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &712251459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19826,6 +19839,16 @@ PrefabInstance:
       propertyPath: defaultHaveWeapon
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 440916406678147992, guid: cb8df5edbb5664208a777669df5106a5,
+        type: 3}
+      propertyPath: pushContactFilter.layerMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 440916406678147992, guid: cb8df5edbb5664208a777669df5106a5,
+        type: 3}
+      propertyPath: pushContactFilter.useNormalAngle
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 440916406678147996, guid: cb8df5edbb5664208a777669df5106a5,
         type: 3}
       propertyPath: m_FlipX
@@ -19834,7 +19857,7 @@ PrefabInstance:
     - target: {fileID: 440916406678147999, guid: cb8df5edbb5664208a777669df5106a5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.9
+      value: 3.75
       objectReference: {fileID: 0}
     - target: {fileID: 440916406678147999, guid: cb8df5edbb5664208a777669df5106a5,
         type: 3}

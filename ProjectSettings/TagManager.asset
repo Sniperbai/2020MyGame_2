@@ -7,6 +7,7 @@ TagManager:
   - SkyGround
   - ground
   - Bullet
+  - pushable
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - player
   - IgnorePlayer
   - enemy
-  - 
+  - pushable
   - 
   - 
   - 
