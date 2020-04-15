@@ -47,6 +47,11 @@ public class PlayerInput :MonoBehaviour
             Horizontal.Get();
             Vertical.Get();
         }
+        else
+        {
+            Horizontal.value = 0;
+            Vertical.value = 0;
+        }
 
     }
 

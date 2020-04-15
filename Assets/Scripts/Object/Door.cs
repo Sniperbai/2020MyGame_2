@@ -5,10 +5,16 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     Animator animator;
+    public bool isOpen;
 
     private void Start()
     {
         animator = transform.GetComponent<Animator>();
+
+        if (isOpen)
+        {
+            Open();
+        }
     }
 
     //开门
