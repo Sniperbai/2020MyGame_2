@@ -134,7 +134,7 @@ public class PlayerCharacter : MonoBehaviour
 
         UpdateFollowTargetPos();
 
-        CheckPushableObj();
+        //CheckPushableObj();
 
     }
 
@@ -142,9 +142,27 @@ public class PlayerCharacter : MonoBehaviour
     {
         currentPlatform = collision.gameObject.GetComponent<PassPlatform>();
     }
-    private void OnTriggerExit2D(Collider2D collision)
+
+    private void OnCollisionExit2D(Collision2D collision)
     {
         currentPlatform = null;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("OnTriggerEnter:" + collision.name) ;
+        if (collision.tag == TagConst.pushable)
+        {
+            currentPushable = collision.transform.GetComponent<Pushable>();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == TagConst.pushable)
+        {
+            currentPushable = null;
+        }
     }
 
     #endregion
@@ -336,7 +354,33 @@ public class PlayerCharacter : MonoBehaviour
         if (UpdateJump()) SetSpeedY(speedY);
 
         //更新当前推的游戏物体的速度
-        if (currentPushable != null) currentPushable.Move(PlayerInput.instance.Horizontal.value * speedX * 0.2f);
+        if (currentPushable != null)
+        {
+            //对应的是推箱子的动画
+            animator.SetBool("isPush",true&& PlayerInput.instance.Horizontal.value!=0);
+            //判断可以推的游戏物体在我们的左边还是右边
+            bool isLeft = transform.position.x - currentPushable.transform.position.x > 0;
+            float speed = PlayerInput.instance.Horizontal.value * speedX * 0.2f;
+
+            if (isLeft)
+            {
+                if (speed > 0) { speed = 0; }
+            }
+
+            bool isRight = transform.position.x - currentPushable.transform.position.x < 0;
+           
+            if (isRight)
+            {
+                if (speed < 0) { speed = 0; }
+            }
+
+            currentPushable.Move(speed);
+        }
+        else
+        {
+            animator.SetBool("isPush", false);
+        }
+            
     }
 
     //更新跟随位置
