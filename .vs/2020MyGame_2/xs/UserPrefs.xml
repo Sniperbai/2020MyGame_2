@@ -1,5 +1,8 @@
 ﻿<Properties StartupConfiguration="{155432D1-7EE6-A533-C1DB-CEA9DB2B7E56}|">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Other/ChangerSpawnPos.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Other/ChangerSpawnPos.cs" Line="15" Column="63" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -9,10 +12,10 @@
                 <Node name="Const" expanded="True" />
                 <Node name="Controller" expanded="True" />
                 <Node name="Manager" expanded="True" />
-                <Node name="Object" expanded="True">
-                  <Node name="PlayerCharacter.cs" selected="True" />
+                <Node name="Object" expanded="True" />
+                <Node name="Other" expanded="True">
+                  <Node name="ChangerSpawnPos.cs" selected="True" />
                 </Node>
-                <Node name="Other" expanded="True" />
                 <Node name="View" expanded="True" />
               </Node>
             </Node>
@@ -23,7 +26,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="80b813e4-bb9e-4e89-9a87-39b81e6c745e" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6223ca85-c17f-4d60-a1e1-08041d3a2b26" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
