@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door : MonoBehaviour
+public class Door : MonoBehaviour,Openable
 {
     Animator animator;
     public bool isOpen;
@@ -20,7 +20,7 @@ public class Door : MonoBehaviour
     //开门
     public void Open()
     {
-        animator.SetBool("isOpen",true);
+        animator.SetBool("isOpen", true);
     }
 
     //关门

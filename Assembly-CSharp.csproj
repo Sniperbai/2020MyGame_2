@@ -84,9 +84,11 @@
     <Compile Include="Assets\Scripts\Object\PassPlatform.cs" />
     <Compile Include="Assets\Scripts\Object\PlayerCharacter.cs" />
     <Compile Include="Assets\Scripts\Object\PlayerInput.cs" />
+    <Compile Include="Assets\Scripts\Object\PressurePad.cs" />
     <Compile Include="Assets\Scripts\Object\Pushable.cs" />
     <Compile Include="Assets\Scripts\Object\SetMaterialRenderQueue.cs" />
     <Compile Include="Assets\Scripts\Object\Switch.cs" />
+    <Compile Include="Assets\Scripts\Object\SwitchBase.cs" />
     <Compile Include="Assets\Scripts\Object\Water.cs" />
     <Compile Include="Assets\Scripts\Object\WeaponPickup.cs" />
     <Compile Include="Assets\Scripts\Other\AttackRange.cs" />
