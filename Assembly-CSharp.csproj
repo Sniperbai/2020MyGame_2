@@ -81,6 +81,8 @@
     <Compile Include="Assets\Scripts\Object\InputButton.cs" />
     <Compile Include="Assets\Scripts\Object\Key.cs" />
     <Compile Include="Assets\Scripts\Object\MovingPlatform.cs" />
+    <Compile Include="Assets\Scripts\Object\MovingPlatformBase.cs" />
+    <Compile Include="Assets\Scripts\Object\MovingPlatformOpenable.cs" />
     <Compile Include="Assets\Scripts\Object\PassPlatform.cs" />
     <Compile Include="Assets\Scripts\Object\PlayerCharacter.cs" />
     <Compile Include="Assets\Scripts\Object\PlayerInput.cs" />
