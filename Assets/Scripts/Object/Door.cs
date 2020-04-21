@@ -9,7 +9,7 @@ public class Door : MonoBehaviour,Openable
 
     private void Start()
     {
-        animator = transform.GetComponent<Animator>();
+        animator = transform.Find("sprite").GetComponent<Animator>();
 
         if (isOpen)
         {

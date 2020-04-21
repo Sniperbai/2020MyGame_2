@@ -89,6 +89,7 @@
     <Compile Include="Assets\Scripts\Object\PressurePad.cs" />
     <Compile Include="Assets\Scripts\Object\Pushable.cs" />
     <Compile Include="Assets\Scripts\Object\SetMaterialRenderQueue.cs" />
+    <Compile Include="Assets\Scripts\Object\Spikes.cs" />
     <Compile Include="Assets\Scripts\Object\Switch.cs" />
     <Compile Include="Assets\Scripts\Object\SwitchBase.cs" />
     <Compile Include="Assets\Scripts\Object\Water.cs" />

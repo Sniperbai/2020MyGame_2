@@ -32,7 +32,7 @@ public class Damageable : MonoBehaviour
     public void TakeDamage(int damage,HurtType hurtType,string ResetPos)
     {
         if (isEnable == false) { return; }  //不可用的状态
-        if (health < 0){ return; }          //已经死亡了
+        if (health <= 0){ return; }          //已经死亡了
 
         //血量要减少
         health--;

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovingPlatformOpenable : MovingPlatform, Openable
+public class MovingPlatformOpenable : MovingPlatformBase, Openable
 {
     bool isOpen;               //是不是打开的状态
 
@@ -22,5 +22,14 @@ public class MovingPlatformOpenable : MovingPlatform, Openable
         {
             base.Update();
         }  
+    }
+
+    protected override void LateUpdate()
+    {
+        if (isOpen)
+        {
+            base.LateUpdate();
+        }
+        
     }
 }

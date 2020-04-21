@@ -34,4 +34,6 @@ public class Switch : SwitchBase
         transform.GetComponent<BoxCollider2D>().enabled = false;
     }
 
+    
+
 }
