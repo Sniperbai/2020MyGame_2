@@ -195,12 +195,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3900b555b3242e291d9b892d9dc5ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  isCanMove: 0
   enemyStatus: 0
   attackRange: 2
   listenRange: 5
   attackTarget: {fileID: 0}
+  speed: 2
+  isCanMove: 0
 --- !u!1 &5166229638380821032
 GameObject:
   m_ObjectHideFlags: 0

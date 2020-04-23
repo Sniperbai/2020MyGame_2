@@ -1,22 +1,5 @@
 ﻿<Properties StartupConfiguration="{155432D1-7EE6-A533-C1DB-CEA9DB2B7E56}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Object/Switch.cs">
-    <Files>
-      <File FileName="Assets/Scripts/Object/Switch.cs" Line="24" Column="13" IsPinned="True" />
-      <File FileName="Assets/Scripts/Other/ChangerSpawnPos.cs" />
-      <File FileName="Assets/Scripts/Object/SwitchBase.cs" />
-      <File FileName="Assets/Scripts/Object/Door.cs" Line="32" Column="1" />
-      <File FileName="Assets/Scripts/Object/PressurePad.cs" />
-      <File FileName="Assets/Scripts/Const/TagConst.cs" />
-      <File FileName="Assets/Scripts/Object/PlayerCharacter.cs" />
-      <File FileName="Assets/Scripts/Other/AttackRange.cs" />
-      <File FileName="Assets/Scripts/Object/MovingPlatform.cs" />
-      <File FileName="Assets/Scripts/Object/MovingPlatformBase.cs" Line="55" Column="1" />
-      <File FileName="Assets/Scripts/Object/MovingPlatformOpenable.cs" Line="31" Column="31" />
-      <File FileName="Assets/Scripts/Object/Spikes.cs" Line="36" Column="43" />
-      <File FileName="Assets/Scripts/View/GamePanel.cs" Line="34" Column="1" />
-      <File FileName="Assets/Scripts/Controller/Damageable.cs" Line="35" Column="53" />
-      <File FileName="Assets/Scripts/Object/Key.cs" Line="45" Column="41" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -27,7 +10,7 @@
                 <Node name="Controller" expanded="True" />
                 <Node name="Manager" expanded="True" />
                 <Node name="Object" expanded="True">
-                  <Node name="Switch.cs" selected="True" />
+                  <Node name="Spitter.cs" selected="True" />
                 </Node>
                 <Node name="Other" expanded="True" />
                 <Node name="View" expanded="True" />

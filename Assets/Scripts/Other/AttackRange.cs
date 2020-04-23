@@ -4,30 +4,38 @@ using UnityEngine;
 
 public class AttackRange : MonoBehaviour
 {
-    List<GameObject> damageables = new List<GameObject>();
+    public List<GameObject> damageables = new List<GameObject>();
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Damageable damageable = collision.transform.GetComponent<Damageable>();
-
-        if (damageable != null)
+        if (collision.tag != TagConst.Player)
         {
-            damageables.Add(damageable.gameObject);
+            Damageable damageable = collision.transform.GetComponent<Damageable>();
+
+            if (damageable != null)
+            {
+                damageables.Add(damageable.gameObject);
+            }
         }
+        
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Damageable damageable = collision.transform.GetComponent<Damageable>();
-
-        if (damageable != null)
+        if (collision.tag != TagConst.Player)
         {
-            if (!damageables.Contains(damageable.gameObject))
+            Damageable damageable = collision.transform.GetComponent<Damageable>();
+
+            if (damageable != null)
             {
-                damageables.Add(damageable.gameObject);
+                if (!damageables.Contains(damageable.gameObject))
+                {
+                    damageables.Add(damageable.gameObject);
+                }
+
             }
-            
         }
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)

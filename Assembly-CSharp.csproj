@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\Object\Chomper.cs" />
     <Compile Include="Assets\Scripts\Object\DestructibleColumn.cs" />
     <Compile Include="Assets\Scripts\Object\Door.cs" />
+    <Compile Include="Assets\Scripts\Object\EnemyBase.cs" />
     <Compile Include="Assets\Scripts\Object\HubDoor.cs" />
     <Compile Include="Assets\Scripts\Object\InfoSign.cs" />
     <Compile Include="Assets\Scripts\Object\InputAxis.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Assets\Scripts\Object\Pushable.cs" />
     <Compile Include="Assets\Scripts\Object\SetMaterialRenderQueue.cs" />
     <Compile Include="Assets\Scripts\Object\Spikes.cs" />
+    <Compile Include="Assets\Scripts\Object\Spitter.cs" />
     <Compile Include="Assets\Scripts\Object\Switch.cs" />
     <Compile Include="Assets\Scripts\Object\SwitchBase.cs" />
     <Compile Include="Assets\Scripts\Object\Water.cs" />
