@@ -1,5 +1,11 @@
 ﻿<Properties StartupConfiguration="{155432D1-7EE6-A533-C1DB-CEA9DB2B7E56}|">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Object/Spitter.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Object/AcidBubbles.cs" Line="15" Column="41" />
+      <File FileName="Assets/Scripts/Object/BulletBase.cs" Line="40" Column="62" />
+      <File FileName="Assets/Scripts/Object/Spitter.cs" Line="189" Column="66" />
+      <File FileName="Assets/Scripts/Object/EnemyBase.cs" Line="110" Column="44" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">

@@ -5,7 +5,9 @@ using UnityEngine;
 public class Spitter : EnemyBase
 {
     #region 字段
+    GameObject bulletProfab;
 
+    public Transform bulletSpawnPos;
 
     //public float speed;
 
@@ -169,7 +171,26 @@ public class Spitter : EnemyBase
         //base.OnAttack();
 
         //创建一个子弹
-        Debug.Log("创建一个子弹");
+        if (bulletProfab == null)
+        {
+            bulletProfab = Resources.Load<GameObject>("Prefabs/Object/AcidBubbles");
+        }
+
+        Debug.Log("创建一个子弹！");
+
+        GameObject bullet = GameObject.Instantiate(bulletProfab);
+
+        bullet.transform.position = bulletSpawnPos.position;
+
+        //计算子弹需要的初速度
+        // y = 0.5 * a * t * t
+
+        float y = transform.position.y - attackTarget.position.y;
+        float x = attackTarget.position.x - transform.position.x;
+
+        float t = Mathf.Sqrt((y * 2) / Mathf.Abs(Physics2D.gravity.y));
+        float v = x / t;
+        bullet.GetComponent<AcidBubbles>().SetSpeed(new Vector2 (v,0));
     }
 
     #endregion

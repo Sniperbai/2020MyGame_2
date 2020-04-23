@@ -70,7 +70,9 @@
     <Compile Include="Assets\Scripts\Controller\Damageable.cs" />
     <Compile Include="Assets\Scripts\Controller\SceneController.cs" />
     <Compile Include="Assets\Scripts\Manager\DataManager.cs" />
+    <Compile Include="Assets\Scripts\Object\AcidBubbles.cs" />
     <Compile Include="Assets\Scripts\Object\Bullet.cs" />
+    <Compile Include="Assets\Scripts\Object\BulletBase.cs" />
     <Compile Include="Assets\Scripts\Object\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\Object\Chomper.cs" />
     <Compile Include="Assets\Scripts\Object\DestructibleColumn.cs" />

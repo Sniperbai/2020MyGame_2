@@ -105,6 +105,10 @@ public class EnemyBase : MonoBehaviour
             //播放run动画
             enemyStatus = EnemyStatus.Run;
         }
+        else
+        {
+            enemyStatus = EnemyStatus.Idle;
+        }
 
     }
 
