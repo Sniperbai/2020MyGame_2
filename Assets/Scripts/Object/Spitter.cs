@@ -36,6 +36,8 @@ public class Spitter : EnemyBase
 
         UpdateDirection();    //更新敌人的方向
 
+        CheckIsCanAttack();
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -165,6 +167,18 @@ public class Spitter : EnemyBase
         }
     }
 
+    //是不是能够攻击了
+    public void CheckIsCanAttack()
+    {
+        if (enemyStatus == EnemyStatus.Attack)
+        {
+            if (attackTarget.position.y > transform.position.y + 2)
+            {
+                enemyStatus = EnemyStatus.Idle;
+            }
+        }
+    }
+
     //进行攻击
     public override void OnAttack()
     {
@@ -182,15 +196,22 @@ public class Spitter : EnemyBase
 
         bullet.transform.position = bulletSpawnPos.position;
 
+        float g = Mathf.Abs(Physics2D.gravity.y) * bullet.transform.GetComponent<Rigidbody2D>().gravityScale;
+
+        float v0 = 8;    //数值向上的初速度
+        float t0 = v0 / g;
+        float y0 = 0.5f * g * t0 * t0;
+
+
         //计算子弹需要的初速度
         // y = 0.5 * a * t * t
 
-        float y = transform.position.y - attackTarget.position.y;
-        float x = attackTarget.position.x - transform.position.x;
+        float y = transform.position.y - attackTarget.position.y + y0;
+        float x = attackTarget.position.x - transform.position.x + Random.Range(-1.0f,1.0f);
 
-        float t = Mathf.Sqrt((y * 2) / Mathf.Abs(Physics2D.gravity.y));
+        float t = Mathf.Sqrt((y * 2) / g) + t0;
         float v = x / t;
-        bullet.GetComponent<AcidBubbles>().SetSpeed(new Vector2 (v,0));
+        bullet.GetComponent<AcidBubbles>().SetSpeed(new Vector2 (v,v0));
     }
 
     #endregion

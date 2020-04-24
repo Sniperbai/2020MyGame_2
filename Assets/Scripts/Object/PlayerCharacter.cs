@@ -611,7 +611,12 @@ public class PlayerCharacter : MonoBehaviour
         SetWudi(1);
 
         //设置位置
-        transform.position = GameObject.Find(ResetPos).transform.position;
+        GameObject targetPos = GameObject.Find(ResetPos);
+        if (targetPos != null)
+        {
+            transform.position = targetPos.transform.position;
+        }
+ 
     }
 
     public void OnDead(string resetPos)
