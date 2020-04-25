@@ -168,4 +168,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   hurtType: 0
-  ResetPos: 
+  ResetPos: SpawnPos1
