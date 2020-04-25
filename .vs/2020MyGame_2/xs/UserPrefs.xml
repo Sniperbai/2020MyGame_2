@@ -3,9 +3,9 @@
     <Files>
       <File FileName="Assets/Scripts/Object/AcidBubbles.cs" Line="15" Column="41" />
       <File FileName="Assets/Scripts/Object/BulletBase.cs" />
-      <File FileName="Assets/Scripts/Object/Spitter.cs" Line="210" Column="93" />
+      <File FileName="Assets/Scripts/Object/Spitter.cs" Line="47" Column="51" />
       <File FileName="Assets/Scripts/Object/EnemyBase.cs" />
-      <File FileName="Assets/Scripts/Object/PlayerCharacter.cs" Line="614" Column="58" />
+      <File FileName="Assets/Scripts/Object/PlayerCharacter.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

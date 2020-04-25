@@ -36,7 +36,7 @@ public class Spitter : EnemyBase
 
         UpdateDirection();    //更新敌人的方向
 
-        CheckIsCanAttack();
+        //CheckIsCanAttack();
 
     }
 
@@ -147,7 +147,6 @@ public class Spitter : EnemyBase
         }
     }
 
-
     //public override void OnDead(string resetPos)
     //{
     //    SetSpeedX(0);
@@ -155,6 +154,7 @@ public class Spitter : EnemyBase
     //}
 
     //更新敌人的方向
+
     public void UpdateDirection()
     {
         if (attackTarget.position.x - transform.position.x > 0)
@@ -168,18 +168,19 @@ public class Spitter : EnemyBase
     }
 
     //是不是能够攻击了
-    public void CheckIsCanAttack()
-    {
-        if (enemyStatus == EnemyStatus.Attack)
-        {
-            if (attackTarget.position.y > transform.position.y + 2)
-            {
-                enemyStatus = EnemyStatus.Idle;
-            }
-        }
-    }
+    //public void CheckIsCanAttack()
+    //{
+    //    if (enemyStatus == EnemyStatus.Attack)
+    //    {
+    //        if (attackTarget.position.y > transform.position.y + 2)
+    //        {
+    //            enemyStatus = EnemyStatus.Idle;
+    //        }
+    //    }
+    //}
 
     //进行攻击
+
     public override void OnAttack()
     {
         //base.OnAttack();
@@ -201,16 +202,29 @@ public class Spitter : EnemyBase
         float v0 = 8;    //数值向上的初速度
         float t0 = v0 / g;
         float y0 = 0.5f * g * t0 * t0;
+        float v = 0;
 
+        float x = attackTarget.position.x - transform.position.x + Random.Range(-1.5f, 1.5f);
 
-        //计算子弹需要的初速度
-        // y = 0.5 * a * t * t
+        if (transform.position.y + y0 > attackTarget.position.y)
+        {
+            //计算子弹需要的初速度
+            // y = 0.5 * a * t * t
 
-        float y = transform.position.y - attackTarget.position.y + y0;
-        float x = attackTarget.position.x - transform.position.x + Random.Range(-1.0f,1.0f);
+            float y = transform.position.y - attackTarget.position.y + y0;
 
-        float t = Mathf.Sqrt((y * 2) / g) + t0;
-        float v = x / t;
+            float t = Mathf.Sqrt((y * 2) / g) + t0;
+            v = x / t;
+        }
+        else if (transform.position.y + y0 < attackTarget.position.y)
+        {
+            float y = attackTarget.position.y - transform.position.y;
+            float t = Mathf.Sqrt((y * 2) / g);
+
+            v0 = g * t;
+            v = x / t;
+        }
+        
         bullet.GetComponent<AcidBubbles>().SetSpeed(new Vector2 (v,v0));
     }
 
