@@ -43,13 +43,15 @@ public class MovingPlatformBase : MonoBehaviour
         {
             if (movingType == MovingType.Horizontal)
             {
-                contactPoint[i].rigidbody.velocity += new Vector2(isMoveToEnd ? speed : -speed, 0);
+                if (startPos.x < endPos.x)  // 开始向右移动
+                {
+                    contactPoint[i].rigidbody.velocity += new Vector2(isMoveToEnd ? speed : -speed, 0);
+                }
+                else                        // 开始向左移动
+                {
+                    contactPoint[i].rigidbody.velocity += new Vector2(isMoveToEnd ? -speed : speed, 0);
+                }
             }
-            else
-            {
-                //contactPoint[i].rigidbody.velocity += new Vector2(0, isMoveToEnd ? speed : -speed);
-            }
-
         }
     }
 

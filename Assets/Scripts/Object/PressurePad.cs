@@ -16,7 +16,7 @@ public class PressurePad : SwitchBase
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag != TagConst.ground)
+        if (collision.tag != TagConst.ground && collision.name != "attackRange")
         {
             Open();
             objCount++;

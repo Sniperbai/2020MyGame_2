@@ -1,11 +1,16 @@
 ﻿<Properties StartupConfiguration="{155432D1-7EE6-A533-C1DB-CEA9DB2B7E56}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Object/Spitter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Object/MovingPlatformBase.cs">
     <Files>
       <File FileName="Assets/Scripts/Object/AcidBubbles.cs" Line="15" Column="41" />
       <File FileName="Assets/Scripts/Object/BulletBase.cs" />
-      <File FileName="Assets/Scripts/Object/Spitter.cs" Line="47" Column="51" />
-      <File FileName="Assets/Scripts/Object/EnemyBase.cs" />
+      <File FileName="Assets/Scripts/Object/Spitter.cs" Line="237" Column="10" />
+      <File FileName="Assets/Scripts/Object/EnemyBase.cs" Line="86" Column="19" />
       <File FileName="Assets/Scripts/Object/PlayerCharacter.cs" />
+      <File FileName="Assets/Scripts/Other/AttackRange.cs" Line="18" Column="14" />
+      <File FileName="Assets/Scripts/Object/Chomper.cs" Line="65" Column="10" />
+      <File FileName="Assets/Scripts/Object/MovingPlatformOpenable.cs" Line="5" Column="50" />
+      <File FileName="Assets/Scripts/Object/PressurePad.cs" Line="19" Column="79" />
+      <File FileName="Assets/Scripts/Object/MovingPlatformBase.cs" Line="52" Column="104" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,7 +22,7 @@
                 <Node name="Controller" expanded="True" />
                 <Node name="Manager" expanded="True" />
                 <Node name="Object" expanded="True">
-                  <Node name="Spitter.cs" selected="True" />
+                  <Node name="MovingPlatformBase.cs" selected="True" />
                 </Node>
                 <Node name="Other" expanded="True" />
                 <Node name="View" expanded="True" />

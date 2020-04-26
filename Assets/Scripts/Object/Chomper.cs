@@ -52,10 +52,19 @@ public class Chomper : EnemyBase
     public void CheckIsCanMove()
     {
         RaycastHit2D raycastHit2D = Physics2D.Raycast(startCheckPos.position, Vector2.down, 1, 1 << 8);
+        RaycastHit2D raycast_forward = Physics2D.Raycast(startCheckPos.position,spriteRenderer.flipX? Vector2.left : Vector2.right, 0.5f, 1 << 8);
 
         Debug.DrawLine(startCheckPos.position, startCheckPos.position + Vector3.down,Color.red);
+        Debug.DrawLine(startCheckPos.position, startCheckPos.position + (spriteRenderer.flipX ? Vector3.left : Vector3.right)*0.5f, Color.red);
 
-        isCanMove = raycastHit2D;
+        if (raycast_forward)
+        {
+            isCanMove = false;
+        }
+        else
+        {
+            isCanMove = raycastHit2D;
+        }
     }
 
     public override void OnUpdateStatus()

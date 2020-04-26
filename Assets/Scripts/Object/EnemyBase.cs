@@ -83,7 +83,7 @@ public class EnemyBase : MonoBehaviour
     }
 
     //监听敌人
-    public void UpdateListener()
+    public virtual void UpdateListener()
     {
         if (attackTarget == null)
         {
@@ -105,10 +105,10 @@ public class EnemyBase : MonoBehaviour
             //播放run动画
             enemyStatus = EnemyStatus.Run;
         }
-        else
-        {
-            enemyStatus = EnemyStatus.Idle;
-        }
+        //else
+        //{
+        //    enemyStatus = EnemyStatus.Idle;
+        //}
 
     }
 

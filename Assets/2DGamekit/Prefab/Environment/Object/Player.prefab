@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 969239840}
   - component: {fileID: 4898252831781962617}
   - component: {fileID: 6900605640935015945}
-  m_Layer: 13
+  m_Layer: 10
   m_Name: attackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,6 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb20eac3d4ee24805abd55311e477320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageables: []
 --- !u!50 &6900605640935015945
 Rigidbody2D:
   serializedVersion: 4

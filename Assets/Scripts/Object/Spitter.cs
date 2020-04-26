@@ -228,5 +228,14 @@ public class Spitter : EnemyBase
         bullet.GetComponent<AcidBubbles>().SetSpeed(new Vector2 (v,v0));
     }
 
+    public override void UpdateListener()
+    {
+        base.UpdateListener();
+        if (Vector3.Distance(transform.position, attackTarget.position) > attackRange)
+        {
+            enemyStatus = EnemyStatus.Idle;
+        }
+    }
+
     #endregion
 }

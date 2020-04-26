@@ -8,22 +8,22 @@ public class AttackRange : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag != TagConst.Player)
-        {
+        //if (collision.tag != TagConst.Player)
+        //{
             Damageable damageable = collision.transform.GetComponent<Damageable>();
 
             if (damageable != null)
             {
                 damageables.Add(damageable.gameObject);
             }
-        }
+        //}
         
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag != TagConst.Player)
-        {
+        //if (collision.tag != TagConst.Player)
+        //{
             Damageable damageable = collision.transform.GetComponent<Damageable>();
 
             if (damageable != null)
@@ -34,7 +34,7 @@ public class AttackRange : MonoBehaviour
                 }
 
             }
-        }
+        //}
         
     }
 
