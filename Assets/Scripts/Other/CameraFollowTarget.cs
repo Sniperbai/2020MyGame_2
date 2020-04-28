@@ -19,9 +19,11 @@ public class CameraFollowTarget : MonoBehaviour
 
     public bool isChangeView;   //是否修改View
 
+    [HideInInspector]
     public float defualtView;
     public float currentView;
     public float targetView;
+    private Transform defaultTarget;
 
     Camera camera;
 
@@ -99,7 +101,22 @@ public class CameraFollowTarget : MonoBehaviour
         SetFollowTarget(target,time);
     }
 
+    //当物体下落调用 过一段时间 恢复
+    public void SetFollowTarget(GameObject target,int time)
+    {
+        defaultTarget = this.target;   //对当前相机的跟随的目标做一个保存
+        SetFollowTarget( target.transform,time );
 
+        Invoke("ResetFollowTarget",3);
+    }
+
+    public void ResetFollowTarget()
+    {
+        Debug.Log("ResetFollowTarget");
+        SetFollowTarget(defaultTarget, 1);
+        //恢复玩家的操作
+        PlayerInput.instance.SetEnable(true);
+    }
     public Vector3 LimitPos(Vector3 targetPos)
     {
         if (targetPos.x < rangeMin.x)

@@ -17,7 +17,7 @@ public class Switch : SwitchBase
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == TagConst.Bullet)
+        if (collision.tag == TagConst.Bullet || collision.tag == TagConst.pushable)
         {
             //打开
             Open();
