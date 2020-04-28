@@ -9,6 +9,7 @@ public class TagConst
     public const string Bullet = "Bullet";
     public const string pushable = "pushable";
     public const string ground = "ground";
+    public const string MovingPlatform = "MovingPlatform";
 }
 
 

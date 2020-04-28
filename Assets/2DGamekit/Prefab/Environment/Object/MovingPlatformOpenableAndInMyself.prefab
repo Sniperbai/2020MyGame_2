@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 2704881151346358667}
   m_Layer: 8
   m_Name: MovingPlatformOpenableAndInMyself
-  m_TagString: SkyGround
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -270,7 +270,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2704881151346358666}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.46, y: -6.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -359,8 +359,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d95a2930d6c64d08893cf20089882e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPos: {x: 8.46, y: -6.55, z: 0}
-  endPos: {x: -4.38, y: -6.55, z: 0}
+  startPos: {x: 12.6, y: 3.49, z: 0}
+  endPos: {x: 1.47, y: 3.49, z: 0}
   movingType: 0
   speed: 2
   contactFilter:
@@ -596,3 +596,4 @@ MonoBehaviour:
   - {fileID: 21300002, guid: c812bc8c71a77a949ad4ddc0cf831fc1, type: 3}
   - {fileID: 21300000, guid: c812bc8c71a77a949ad4ddc0cf831fc1, type: 3}
   openableTarget: {fileID: 2704881151346358666}
+  openableTargets: []

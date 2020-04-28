@@ -108,8 +108,8 @@ public class Chomper : EnemyBase
 
                 //设置奔跑动画
                 animator.SetBool("isRun", true);
-                //跑向要攻击的目标
-                if (isCanMove)
+                //跑向要攻击的目标 (能够移动 并且 要在可监听的范围之内)
+                if (isCanMove && Vector3.Distance(transform.position,attackTarget.position) <= listenRange)
                 {
                     if (attackTarget.position.x - transform.position.x > 0)
                     {

@@ -8,6 +8,8 @@ TagManager:
   - ground
   - Bullet
   - pushable
+  - pressurePad
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX
