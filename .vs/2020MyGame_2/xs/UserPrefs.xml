@@ -1,8 +1,11 @@
 ﻿<Properties StartupConfiguration="{155432D1-7EE6-A533-C1DB-CEA9DB2B7E56}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Object/Pushable.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Object/MovingPlatformBase.cs">
     <Files>
       <File FileName="Assets/Scripts/Other/CameraFollowTarget.cs" Line="28" Column="12" />
-      <File FileName="Assets/Scripts/Object/Pushable.cs" Line="99" Column="33" />
+      <File FileName="Assets/Scripts/Object/Pushable.cs" Line="64" Column="9" />
+      <File FileName="Assets/Scripts/Object/PressurePad.cs" Line="20" Column="67" />
+      <File FileName="Assets/Scripts/Object/SwitchBase.cs" Line="58" Column="10" />
+      <File FileName="Assets/Scripts/Object/MovingPlatformBase.cs" Line="31" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,7 +17,7 @@
                 <Node name="Controller" expanded="True" />
                 <Node name="Manager" expanded="True" />
                 <Node name="Object" expanded="True">
-                  <Node name="Pushable.cs" selected="True" />
+                  <Node name="MovingPlatformBase.cs" selected="True" />
                 </Node>
                 <Node name="Other" expanded="True" />
                 <Node name="View" expanded="True" />

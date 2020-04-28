@@ -20,7 +20,7 @@ public class SwitchBase : MonoBehaviour
 {
     public SwitchStatus switchStatus = SwitchStatus.Close;
     public Sprite[] statusSprites;
-    SpriteRenderer spriteRenderer;
+    protected SpriteRenderer spriteRenderer;
 
     public GameObject openableTarget;      //要打开的目标
 

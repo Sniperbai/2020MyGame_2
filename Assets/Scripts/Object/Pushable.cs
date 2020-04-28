@@ -33,7 +33,7 @@ public class Pushable : MonoBehaviour
 
     bool isCanFall = true;
 
-    //bool isPush = false;  // 是不是正在推 
+    bool isPush = false;  // 是不是正在推 
 
     private void Start()
     {
@@ -45,23 +45,23 @@ public class Pushable : MonoBehaviour
     {
         CheckGround();
         // 如果不是推的状态 x 方向速度为 0 
-        //if (!isPush)
-        //{
-        //    rigidbody2d.velocity = new Vector2(0, rigidbody2d.velocity.y);
-        //}
+        if (!isPush)
+        {
+            rigidbody2d.velocity = new Vector2(0, rigidbody2d.velocity.y);
+        }
     }
 
     public void Move(float x)
     {
         if (!isGrounded) { return; }
-        //isPush = true;
+        isPush = true;
         Move(new Vector2(x, rigidbody2d.velocity.y));
     }
 
     public void Move( Vector2 velocity)
     {
         rigidbody2d.velocity = velocity;
-        //Invoke("ResetIsPush", 0.1f);
+        Invoke("ResetIsPush", 0.1f);
     }
 
     public void CheckGround()
@@ -100,8 +100,8 @@ public class Pushable : MonoBehaviour
     {
         isCanFall = true;
     }
-    //public void ResetIsPush()
-    //{
-    //    isPush = false;
-    //}
+    public void ResetIsPush()
+    {
+        isPush = false;
+    }
 }
