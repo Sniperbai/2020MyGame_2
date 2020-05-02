@@ -100,6 +100,7 @@
     <Compile Include="Assets\Scripts\Object\Water.cs" />
     <Compile Include="Assets\Scripts\Object\WeaponPickup.cs" />
     <Compile Include="Assets\Scripts\Other\AttackRange.cs" />
+    <Compile Include="Assets\Scripts\Other\BossDoor.cs" />
     <Compile Include="Assets\Scripts\Other\CameraFollowTarget.cs" />
     <Compile Include="Assets\Scripts\Other\ChangerSpawnPos.cs" />
     <Compile Include="Assets\Scripts\Other\OpenUrl.cs" />

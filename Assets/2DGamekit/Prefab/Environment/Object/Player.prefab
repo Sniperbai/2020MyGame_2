@@ -57,7 +57,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.52, y: 2.03}
+  m_Size: {x: 1.52, y: 1.5153749}
   m_EdgeRadius: 0
 --- !u!114 &4898252831781962617
 MonoBehaviour:
@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1727748415}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: bulletSpawnPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
