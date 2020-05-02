@@ -1,10 +1,12 @@
 ﻿<Properties StartupConfiguration="{155432D1-7EE6-A533-C1DB-CEA9DB2B7E56}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Object/PlayerCharacter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Object/Gunner.cs">
     <Files>
       <File FileName="Assets/Scripts/Object/PressurePad.cs" Line="26" Column="67" />
-      <File FileName="Assets/Scripts/Const/TagConst.cs" Line="10" Column="41" />
-      <File FileName="Assets/Scripts/Object/PlayerCharacter.cs" Line="153" Column="55" />
-      <File FileName="Assets/Scripts/Other/BossDoor.cs" Line="52" Column="28" />
+      <File FileName="Assets/Scripts/Const/TagConst.cs" />
+      <File FileName="Assets/Scripts/Object/PlayerCharacter.cs" />
+      <File FileName="Assets/Scripts/Other/BossDoor.cs" />
+      <File FileName="Assets/Scripts/Controller/Damage.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Object/Gunner.cs" Line="107" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,7 +18,7 @@
                 <Node name="Controller" expanded="True" />
                 <Node name="Manager" expanded="True" />
                 <Node name="Object" expanded="True">
-                  <Node name="PlayerCharacter.cs" selected="True" />
+                  <Node name="Gunner.cs" selected="True" />
                 </Node>
                 <Node name="Other" expanded="True" />
                 <Node name="View" expanded="True" />
