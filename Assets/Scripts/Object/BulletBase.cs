@@ -33,13 +33,17 @@ public class BulletBase : MonoBehaviour
 
         //对游戏物体造成伤害
         damage.OnDamage(collision.gameObject);
-
-        animator.SetBool("isBomb", true);
+        //销毁自己
+        if (animator != null)
+        {
+            animator.SetBool("isBomb", true);
+        }
+        
 
         rigidbody2d.velocity = Vector2.zero;
         transform.GetComponent<Collider2D>().enabled = false;
 
-        //销毁自己
+        
         Destroy(gameObject, 0.15f);
 
     }

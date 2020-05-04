@@ -80,6 +80,7 @@
     <Compile Include="Assets\Scripts\Object\Door.cs" />
     <Compile Include="Assets\Scripts\Object\EnemyBase.cs" />
     <Compile Include="Assets\Scripts\Object\Gunner.cs" />
+    <Compile Include="Assets\Scripts\Object\GunnerProjectile.cs" />
     <Compile Include="Assets\Scripts\Object\HubDoor.cs" />
     <Compile Include="Assets\Scripts\Object\InfoSign.cs" />
     <Compile Include="Assets\Scripts\Object\InputAxis.cs" />

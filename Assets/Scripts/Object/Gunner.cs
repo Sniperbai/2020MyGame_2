@@ -22,6 +22,16 @@ public class Gunner : MonoBehaviour
 
     int defaultDefenceHP;
 
+    public float attackTime = 3;
+
+    public GameObject bossBullet1;
+
+    public Transform bullet1Pos;
+
+    GameObject attackTarget;
+    LineRenderer attack1Line;
+    List<Vector3> attack1LinePosition = new List<Vector3>();
+
     #region  Unity的回调
 
     private void Start()
@@ -37,16 +47,95 @@ public class Gunner : MonoBehaviour
         defenceAble.OnDead += this.OnDefenceDead;
 
         defaultDefenceHP = defenceAble.health;
+
+        attackTarget = GameObject.Find("Player");
+
+        attack1Line = transform.Find("attack1Line").GetComponent<LineRenderer>();
+
+        StartAttack();
     }
 
     private void Update()
     {
         //更新状态
         OnUpdateStatus();
+        //更新攻击的线
+        UpdateAttack1Line();
+    }
+
+    #endregion
+
+    #region 方法
+
+    //开始攻击
+    public void StartAttack()
+    {
+        InvokeRepeating("Attack",1,attackTime);
+    }
+
+    public void Attack()
+    {
+        //int attackType = Random.Range(1, 4);
+        int attackType = 1;
+        switch (attackType)
+        {
+            case 1:
+                attack1Line.transform.gameObject.SetActive(true);
+                //attack1Line
+                break;
+        }
+        if (attackType != 1)
+        {
+            attack1Line.transform.gameObject.SetActive(false);
+        }
+        animator.SetFloat("attackType", attackType);
+        animator.SetTrigger("attack");
+
+    }
+
+    //执行攻击
+    public void AttackExc(int type)
+    {
+        switch (type)
+        {
+            case 1:        //向玩家发射一个子弹
+                GameObject bulletObj1 = GameObject.Instantiate(bossBullet1);
+                bulletObj1.transform.position = bullet1Pos.position;
+                bulletObj1.GetComponent<GunnerProjectile>().SetDirection(((attackTarget.transform.position + Vector3.up) - bullet1Pos.position).normalized);
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+
+        }
+    }
+
+    //攻击结束
+    public void AttackEnd()
+    {
+
+    }
+
+    //停止攻击
+    public void StopAttack()
+    {
+        CancelInvoke("Attack");
+    }
+
+    public void UpdateAttack1Line()
+    {
+        attack1LinePosition.Clear();
+        attack1LinePosition.Add(bullet1Pos.position);
+        attack1LinePosition.Add(bullet1Pos.position+(attackTarget.transform.position+Vector3.up - bullet1Pos.position).normalized * 20);
+        attack1Line.positionCount = attack1LinePosition.Count;
+        attack1Line.SetPositions(attack1LinePosition.ToArray());
 
     }
 
     #endregion
+
+
 
     public void OnUpdateStatus()
     {
@@ -98,12 +187,18 @@ public class Gunner : MonoBehaviour
         currentStatus = GunnerStatus.Disable;
         animator.SetTrigger("Trigger");
         Invoke("ResetDefence", 5);
+
+        // 停止攻击
+        StopAttack();
     }
 
     public void ResetDefence()
     {
         currentStatus = GunnerStatus.Idle;
         defenceAble.health = defaultDefenceHP;
+
+        //开始攻击
+        StartAttack();
     }
 
     #endregion
