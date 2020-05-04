@@ -25,8 +25,10 @@ public class Gunner : MonoBehaviour
     public float attackTime = 3;
 
     public GameObject bossBullet1;
-
     public Transform bullet1Pos;
+
+    public GameObject bossBullet2;
+    public Transform bullet2Pos;
 
     GameObject attackTarget;
     LineRenderer attack1Line;
@@ -76,7 +78,7 @@ public class Gunner : MonoBehaviour
     public void Attack()
     {
         //int attackType = Random.Range(1, 4);
-        int attackType = 1;
+        int attackType = 2;
         switch (attackType)
         {
             case 1:
@@ -104,6 +106,45 @@ public class Gunner : MonoBehaviour
                 bulletObj1.GetComponent<GunnerProjectile>().SetDirection(((attackTarget.transform.position + Vector3.up) - bullet1Pos.position).normalized);
                 break;
             case 2:
+                //Debug.Log("触发第二种攻击！");
+
+                //创建一个子弹
+                GameObject bullet2 = GameObject.Instantiate(bossBullet2);
+
+                //设置子弹的位置
+                bullet2.transform.position = bullet2Pos.position;
+
+                //向玩家抛一个子弹
+                float g = Mathf.Abs(Physics2D.gravity.y) * bullet2.transform.GetComponent<Rigidbody2D>().gravityScale;
+
+                float v0 = 8;    //数值向上的初速度
+                float t0 = v0 / g;
+                float y0 = 0.5f * g * t0 * t0;
+                float v = 0;
+
+                float x = attackTarget.transform.position.x - transform.position.x + Random.Range(-1.5f, 1.5f);
+
+                if (transform.position.y + y0 > attackTarget.transform.position.y)
+                {
+                    //计算子弹需要的初速度
+                    // y = 0.5 * a * t * t
+
+                    float y = transform.position.y - attackTarget.transform.position.y + y0;
+
+                    float t = Mathf.Sqrt((y * 2) / g) + t0;
+                    v = x / t;
+                }
+                else if (transform.position.y + y0 < attackTarget.transform.position.y)
+                {
+                    float y = attackTarget.transform.position.y - transform.position.y;
+                    float t = Mathf.Sqrt((y * 2) / g);
+
+                    v0 = g * t;
+                    v = x / t;
+                }
+
+                bullet2.GetComponent<Gunner2Bullet>().SetSpeed(new Vector2(v,v0));
+
                 break;
             case 3:
                 break;
@@ -187,6 +228,9 @@ public class Gunner : MonoBehaviour
         currentStatus = GunnerStatus.Disable;
         animator.SetTrigger("Trigger");
         Invoke("ResetDefence", 5);
+
+        //隐藏攻击1的红线
+        attack1Line.gameObject.SetActive(false);
 
         // 停止攻击
         StopAttack();

@@ -401,6 +401,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a928d2ab22dd44dd69e469dcef0b5681, type: 3}
+--- !u!1 &361700960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 361700961}
+  m_Layer: 11
+  m_Name: bullet2Pos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &361700961
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 361700960}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.71, y: 0.48, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2012547239}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &478657709
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,7 +441,7 @@ GameObject:
   m_Component:
   - component: {fileID: 478657710}
   - component: {fileID: 478657711}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: attack1Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -538,7 +568,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 590967783}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: bullet1Pos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26829,7 +26859,7 @@ GameObject:
   - component: {fileID: 1622929077}
   - component: {fileID: 1622929076}
   - component: {fileID: 1622929078}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GunnerShield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39679,13 +39709,13 @@ GameObject:
   - component: {fileID: 2012547240}
   - component: {fileID: 2012547243}
   - component: {fileID: 2012547242}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Gunner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &2012547237
 Animator:
   serializedVersion: 3
@@ -39769,6 +39799,7 @@ Transform:
   - {fileID: 1622929075}
   - {fileID: 590967783}
   - {fileID: 478657710}
+  - {fileID: 361700961}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -39836,6 +39867,9 @@ MonoBehaviour:
   bossBullet1: {fileID: 859693396579258625, guid: ea98bbe063ce349bb949a855c46d3b54,
     type: 3}
   bullet1Pos: {fileID: 590967783}
+  bossBullet2: {fileID: 76589795158544821, guid: dc8ff7d5b40e144e4abb2602047c2b5c,
+    type: 3}
+  bullet2Pos: {fileID: 361700961}
 --- !u!114 &2012547243
 MonoBehaviour:
   m_ObjectHideFlags: 0
