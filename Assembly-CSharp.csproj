@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\Object\Bridge.cs" />
     <Compile Include="Assets\Scripts\Object\Bullet.cs" />
     <Compile Include="Assets\Scripts\Object\BulletBase.cs" />
+    <Compile Include="Assets\Scripts\Object\BulletLighting.cs" />
     <Compile Include="Assets\Scripts\Object\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\Object\Chomper.cs" />
     <Compile Include="Assets\Scripts\Object\DestructibleColumn.cs" />
@@ -106,6 +107,7 @@
     <Compile Include="Assets\Scripts\Other\BossDoor.cs" />
     <Compile Include="Assets\Scripts\Other\CameraFollowTarget.cs" />
     <Compile Include="Assets\Scripts\Other\ChangerSpawnPos.cs" />
+    <Compile Include="Assets\Scripts\Other\LightingLine.cs" />
     <Compile Include="Assets\Scripts\Other\OpenUrl.cs" />
     <Compile Include="Assets\Scripts\Other\OrderSetting.cs" />
     <Compile Include="Assets\Scripts\Other\Singleton.cs" />

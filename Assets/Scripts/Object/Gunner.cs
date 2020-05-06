@@ -30,6 +30,8 @@ public class Gunner : MonoBehaviour
     public GameObject bossBullet2;
     public Transform bullet2Pos;
 
+    public BulletLighting bullet3;
+
     GameObject attackTarget;
     LineRenderer attack1Line;
     List<Vector3> attack1LinePosition = new List<Vector3>();
@@ -77,8 +79,8 @@ public class Gunner : MonoBehaviour
 
     public void Attack()
     {
-        //int attackType = Random.Range(1, 4);
-        int attackType = 2;
+        int attackType = Random.Range(1, 4);
+        //int attackType = 2;
         switch (attackType)
         {
             case 1:
@@ -147,6 +149,7 @@ public class Gunner : MonoBehaviour
 
                 break;
             case 3:
+                bullet3.Show();
                 break;
 
         }
@@ -166,6 +169,7 @@ public class Gunner : MonoBehaviour
 
     public void UpdateAttack1Line()
     {
+        if (!attack1Line.gameObject.activeSelf) { return; }
         attack1LinePosition.Clear();
         attack1LinePosition.Add(bullet1Pos.position);
         attack1LinePosition.Add(bullet1Pos.position+(attackTarget.transform.position+Vector3.up - bullet1Pos.position).normalized * 20);
@@ -215,6 +219,12 @@ public class Gunner : MonoBehaviour
     {
         currentStatus = GunnerStatus.Dead;
         animator.SetTrigger("Trigger");
+        //停止攻击
+        StopAttack();
+
+        //隐藏碰撞体
+        transform.GetComponent<Rigidbody2D>().gravityScale = 0;
+        transform.GetComponent<BoxCollider2D>().enabled = false;
     }
 
     public void OnDefenceHurt(HurtType hurtType, string resetPos)
