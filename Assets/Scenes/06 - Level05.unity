@@ -982,7 +982,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &730355898
 Transform:
   m_ObjectHideFlags: 0
@@ -27197,9 +27197,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1429333546}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7aa1d48d3dfdb6544aac8e114a8d735c, type: 3}
+  m_Script: {fileID: 11500000, guid: 661195ba2410a42d48f3b252368d03c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider_boss: {fileID: 1658516416}
+  slider_defence: {fileID: 1964012874}
 --- !u!222 &1429333549
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27223,12 +27225,12 @@ PrefabInstance:
     - target: {fileID: 440916406678147999, guid: cb8df5edbb5664208a777669df5106a5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.96
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 440916406678147999, guid: cb8df5edbb5664208a777669df5106a5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.62
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 440916406678147999, guid: cb8df5edbb5664208a777669df5106a5,
         type: 3}
@@ -40153,7 +40155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.73603344, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -40298,7 +40300,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &2012547237
 Animator:
   serializedVersion: 3
@@ -40408,7 +40410,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &2012547241
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40456,6 +40458,7 @@ MonoBehaviour:
     type: 3}
   bullet2Pos: {fileID: 361700961}
   bullet3: {fileID: 730355899}
+  bossPanel: {fileID: 1429333548}
 --- !u!114 &2012547243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40587,6 +40590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossObj: {fileID: 2012547236}
+  bossPanel: {fileID: 1429333548}
   bossDoorSwitch: {fileID: 1852773059}
 --- !u!1 &2058993123
 GameObject:

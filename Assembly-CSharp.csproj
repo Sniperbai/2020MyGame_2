@@ -112,6 +112,7 @@
     <Compile Include="Assets\Scripts\Other\OrderSetting.cs" />
     <Compile Include="Assets\Scripts\Other\Singleton.cs" />
     <Compile Include="Assets\Scripts\Other\SpriteOffsetWithMouse.cs" />
+    <Compile Include="Assets\Scripts\View\BossPanel.cs" />
     <Compile Include="Assets\Scripts\View\GamePanel.cs" />
     <Compile Include="Assets\Scripts\View\MenuPanel.cs" />
     <Compile Include="Assets\Scripts\View\MyButtons.cs" />

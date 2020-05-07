@@ -21,6 +21,7 @@ public class Gunner : MonoBehaviour
     public GunnerStatus currentStatus = GunnerStatus.Idle;
 
     int defaultDefenceHP;
+    int defaultBossHp;
 
     public float attackTime = 3;
 
@@ -36,6 +37,8 @@ public class Gunner : MonoBehaviour
     LineRenderer attack1Line;
     List<Vector3> attack1LinePosition = new List<Vector3>();
 
+    public BossPanel bossPanel;
+
     #region  Unity的回调
 
     private void Start()
@@ -50,6 +53,7 @@ public class Gunner : MonoBehaviour
         defenceAble.OnHurt += this.OnDefenceHurt;
         defenceAble.OnDead += this.OnDefenceDead;
 
+        defaultBossHp = bossAble.health;
         defaultDefenceHP = defenceAble.health;
 
         attackTarget = GameObject.Find("Player");
@@ -213,6 +217,9 @@ public class Gunner : MonoBehaviour
             bossAble.health++;
             return;
         }
+
+        //更新boss血量
+        bossPanel.UpdateBossHp((float)(bossAble.health) / (float)(defaultBossHp));
     }
 
     public void OnBossDead(string resetPos)
@@ -225,11 +232,15 @@ public class Gunner : MonoBehaviour
         //隐藏碰撞体
         transform.GetComponent<Rigidbody2D>().gravityScale = 0;
         transform.GetComponent<BoxCollider2D>().enabled = false;
+
+        //更新boss血量
+        bossPanel.UpdateBossHp((float)(bossAble.health) / (float)(defaultBossHp));
     }
 
     public void OnDefenceHurt(HurtType hurtType, string resetPos)
     {
-
+        //更新防护罩的血量
+        bossPanel.UpdateDefenceHp((float)defenceAble.health / (float)defaultDefenceHP);
     }
 
     public void OnDefenceDead(string resetPos)
@@ -244,12 +255,19 @@ public class Gunner : MonoBehaviour
 
         // 停止攻击
         StopAttack();
+
+        //打碎的时候也需要更新防雨罩的血量
+        bossPanel.UpdateDefenceHp((float)defenceAble.health / (float)defaultDefenceHP);
+
     }
 
     public void ResetDefence()
     {
         currentStatus = GunnerStatus.Idle;
         defenceAble.health = defaultDefenceHP;
+
+        //恢复的时候也需要更新防雨罩的血量
+        bossPanel.UpdateDefenceHp((float)defenceAble.health / (float)defaultDefenceHP);
 
         //开始攻击
         StartAttack();

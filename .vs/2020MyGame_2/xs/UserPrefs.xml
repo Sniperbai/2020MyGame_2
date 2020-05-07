@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{155432D1-7EE6-A533-C1DB-CEA9DB2B7E56}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Object/Gunner.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/View/BossPanel.cs">
     <Files>
       <File FileName="Assets/Scripts/Object/PressurePad.cs" Line="26" Column="67" />
       <File FileName="Assets/Scripts/Const/TagConst.cs" />
@@ -7,9 +7,10 @@
       <File FileName="Assets/Scripts/Other/BossDoor.cs" />
       <File FileName="Assets/Scripts/Controller/Damage.cs" />
       <File FileName="Assets/Scripts/Object/Gunner.cs" Line="172" Column="60" />
-      <File FileName="Assets/Scripts/Object/Spitter.cs" Line="221" Column="67" />
-      <File FileName="Assets/Scripts/Other/LightingLine.cs" Line="72" Column="14" />
-      <File FileName="Assets/Scripts/Object/BulletLighting.cs" Line="29" Column="51" />
+      <File FileName="Assets/Scripts/Object/Spitter.cs" />
+      <File FileName="Assets/Scripts/Other/LightingLine.cs" />
+      <File FileName="Assets/Scripts/Object/BulletLighting.cs" />
+      <File FileName="Assets/Scripts/View/BossPanel.cs" Line="5" Column="30" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -20,11 +21,11 @@
                 <Node name="Const" expanded="True" />
                 <Node name="Controller" expanded="True" />
                 <Node name="Manager" expanded="True" />
-                <Node name="Object" expanded="True">
-                  <Node name="Gunner.cs" selected="True" />
-                </Node>
+                <Node name="Object" expanded="True" />
                 <Node name="Other" expanded="True" />
-                <Node name="View" expanded="True" />
+                <Node name="View" expanded="True">
+                  <Node name="BossPanel.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>

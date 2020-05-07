@@ -8,6 +8,8 @@ public class BossDoor : MonoBehaviour, Openable
     public GameObject bossObj;
     Transform followTarget;
 
+    public BossPanel bossPanel;
+
     public GameObject bossDoorSwitch;
 
     private void Start()
@@ -44,6 +46,9 @@ public class BossDoor : MonoBehaviour, Openable
 
         //显示 或 创建 BOSS
         bossObj.SetActive(true);
+
+        //把bossPanel显示出来
+        bossPanel.Show();
 
         //把相机聚焦在玩家身上
         Camera.main.GetComponent<CameraFollowTarget>().SetFollowTarget(GameObject.Find("Player").transform, 46, 2);
