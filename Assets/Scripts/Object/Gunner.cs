@@ -169,6 +169,7 @@ public class Gunner : MonoBehaviour
     public void StopAttack()
     {
         CancelInvoke("Attack");
+        //CancelInvoke("attack1Line");
     }
 
     public void UpdateAttack1Line()
@@ -226,8 +227,12 @@ public class Gunner : MonoBehaviour
     {
         currentStatus = GunnerStatus.Dead;
         animator.SetTrigger("Trigger");
+        Debug.Log("隐藏攻击1的线");
         //停止攻击
         StopAttack();
+
+        ////隐藏攻击1的红线
+        //attack1Line.transform.gameObject.SetActive(false);
 
         //隐藏碰撞体
         transform.GetComponent<Rigidbody2D>().gravityScale = 0;
