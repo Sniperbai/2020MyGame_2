@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Controller\Damage.cs" />
     <Compile Include="Assets\Scripts\Controller\Damageable.cs" />
     <Compile Include="Assets\Scripts\Controller\SceneController.cs" />
+    <Compile Include="Assets\Scripts\Manager\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Manager\DataManager.cs" />
     <Compile Include="Assets\Scripts\Object\AcidBubbles.cs" />
     <Compile Include="Assets\Scripts\Object\Bridge.cs" />
@@ -111,6 +112,7 @@
     <Compile Include="Assets\Scripts\Other\OpenUrl.cs" />
     <Compile Include="Assets\Scripts\Other\OrderSetting.cs" />
     <Compile Include="Assets\Scripts\Other\Singleton.cs" />
+    <Compile Include="Assets\Scripts\Other\SingletonMono.cs" />
     <Compile Include="Assets\Scripts\Other\SpriteOffsetWithMouse.cs" />
     <Compile Include="Assets\Scripts\View\BossPanel.cs" />
     <Compile Include="Assets\Scripts\View\GamePanel.cs" />

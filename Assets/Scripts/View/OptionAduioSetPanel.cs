@@ -19,7 +19,8 @@ public class OptionAduioSetPanel : ViewBase
         //对音量进行保存
         PlayerPrefs.SetFloat(Const.MusicVolume,f);
 
-        //修改音量大小 TODO
+        //修改音量大小
+        AudioManager.Instance.ChangeMusicVolume(f);
 
     }
 
@@ -28,7 +29,8 @@ public class OptionAduioSetPanel : ViewBase
         //对音效进行保存
         PlayerPrefs.SetFloat(Const.SoundVolume, f);
 
-        //修改音效大小 TODO
+        //修改音效大小
+        AudioManager.Instance.ChangeSoundVolume(f);
     }
 
     #endregion

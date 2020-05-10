@@ -11,9 +11,16 @@ public class MenuPanel : ViewBase
 
     #endregion
 
+    private void Start()
+    {
+        AudioManager.Instance.PlayMusic("Audio/Music/MusicGameplay");
+    }
+
     #region 点击事件
 
     public void OnStartGameClick() {
+        //播放按钮点击的音乐
+        AudioManager.Instance.PlaySound("Audio/UI/MenuButton01");
 
         //跳转到第一关场景
         SceneController.Instance.LoadScene(1);
@@ -21,6 +28,9 @@ public class MenuPanel : ViewBase
     }
 
     public void OnOptionClick() {
+
+        //播放按钮点击的音乐
+        AudioManager.Instance.PlaySound("Audio/UI/MenuButton01");
 
         //隐藏自己
         this.Hide();
@@ -31,6 +41,9 @@ public class MenuPanel : ViewBase
     }
 
     public void OnExitClick() {
+
+        //播放按钮点击的音乐
+        AudioManager.Instance.PlaySound("Audio/UI/MenuButton01");
 
         //if (Application.isEditor)
         //{

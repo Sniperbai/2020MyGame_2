@@ -10,6 +10,7 @@ public class TagConst
     public const string pushable = "pushable";
     public const string ground = "ground";
     public const string MovingPlatform = "MovingPlatform";
+    public const string PassPlatform = "PassPlatform";
 }
 
 

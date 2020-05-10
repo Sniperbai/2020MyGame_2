@@ -8,6 +8,7 @@ public class GamePanel : SingletonView<GamePanel>
     public GameObject hp_item_prefab;
     Transform hp_parent;
     GameObject[] hp_items;
+    
 
     protected override void Awake()
     {
@@ -15,7 +16,11 @@ public class GamePanel : SingletonView<GamePanel>
         hp_parent = transform.Find("hp");
     }
 
-    
+    private void Start()
+    {
+        AudioManager.Instance.PlayMusic("Audio/Music/MusicGameplay");
+    }
+
     public void InitHP(int hp,int currentHp)
     {
         hp_items = new GameObject[hp];

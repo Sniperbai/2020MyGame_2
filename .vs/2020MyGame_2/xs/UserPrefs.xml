@@ -1,5 +1,16 @@
 ﻿<Properties StartupConfiguration="{155432D1-7EE6-A533-C1DB-CEA9DB2B7E56}|">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Object/PlayerCharacter.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Object/PlayerCharacter.cs" Line="448" Column="91" />
+      <File FileName="Assets/Scripts/Const/TagConst.cs" Line="13" Column="55" />
+      <File FileName="Assets/Scripts/Manager/AudioManager.cs" Line="55" Column="5" />
+      <File FileName="Assets/Scripts/View/SingletonView.cs" Line="21" Column="10" />
+      <File FileName="Assets/Scripts/Other/SingletonMono.cs" Line="16" Column="104" />
+      <File FileName="Assets/Scripts/View/OptionAduioSetPanel.cs" Line="34" Column="1" />
+      <File FileName="Assets/Scripts/View/MenuPanel.cs" Line="16" Column="70" />
+      <File FileName="Assets/Scripts/View/GamePanel.cs" Line="21" Column="70" />
+      <File FileName="Assets/Scripts/Object/InfoSign.cs" Line="30" Column="13" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -10,7 +21,7 @@
                 <Node name="Controller" expanded="True" />
                 <Node name="Manager" expanded="True" />
                 <Node name="Object" expanded="True">
-                  <Node name="Gunner.cs" selected="True" />
+                  <Node name="PlayerCharacter.cs" selected="True" />
                 </Node>
                 <Node name="Other" expanded="True" />
                 <Node name="View" expanded="True" />

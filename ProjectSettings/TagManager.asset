@@ -10,6 +10,7 @@ TagManager:
   - pushable
   - pressurePad
   - MovingPlatform
+  - PassPlatform
   layers:
   - Default
   - TransparentFX

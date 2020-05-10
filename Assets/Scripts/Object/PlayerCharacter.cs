@@ -145,7 +145,10 @@ public class PlayerCharacter : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        currentPlatform = null;
+        if (collision.gameObject.tag == TagConst.PassPlatform)
+        {
+            currentPlatform = null;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -440,6 +443,9 @@ public class PlayerCharacter : MonoBehaviour
 
         gameObject.transform.position = bulletSpawnPos.position;
         gameObject.GetComponent<Bullet>().SetDirection(!spriteRenderer.flipX);
+
+        //播放一个音效
+        AudioManager.Instance.PlaySound("Audio/Ellen/Attacks/Ranged/EllenRangedAttack01");
     }
 
     public void ResetAttackIsReady()
@@ -522,6 +528,11 @@ public class PlayerCharacter : MonoBehaviour
             }
 
         }
+    }
+
+    public void PlayAudio(string audioName)
+    {
+        AudioManager.Instance.PlaySound("Audio/Ellen/" + audioName);
     }
 
     #endregion

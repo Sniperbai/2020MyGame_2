@@ -9,6 +9,8 @@ public class InfoSign : MonoBehaviour
 
     public string tipContent;
 
+    public AudioClip speekClip;   //要播放的音效
+
     public void Start()
     {
         render = transform.GetComponent<SpriteRenderer>();
@@ -22,6 +24,10 @@ public class InfoSign : MonoBehaviour
           
             //显示一个提示
             TipMessagePanel.Instance.ShowTip(tipContent, TipStyle.Style1);
+
+            //播放说话的音乐
+            AudioManager.Instance.PlaySound(speekClip);
+            
         }
         
     }

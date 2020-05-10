@@ -358,6 +358,11 @@ PrefabInstance:
       propertyPath: tipContent
       value: "\u4F60\u597D\uFF01\u6218\u58EB-\u767D\u96E8\u777F\uFF0C\u8BF7\u7EE7\u7EED\u5148\u524D\uFF01"
       objectReference: {fileID: 0}
+    - target: {fileID: 6379180405890783131, guid: e17a740d574d84eada7f921dba0803b2,
+        type: 3}
+      propertyPath: speekClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3508c31c409dd5b48b718b983428ec7c, type: 3}
     - target: {fileID: 6379180405890783135, guid: e17a740d574d84eada7f921dba0803b2,
         type: 3}
       propertyPath: m_Name
@@ -951,6 +956,11 @@ PrefabInstance:
       propertyPath: tipContent
       value: "\u6218\u58EB\u767D\u96E8\u777F\uFF01S\u952E\u4E0B\u8E72\u6309Space\uFF01"
       objectReference: {fileID: 0}
+    - target: {fileID: 6379180405890783131, guid: e17a740d574d84eada7f921dba0803b2,
+        type: 3}
+      propertyPath: speekClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d1ee323d49788f5498c564a3da6a5a8e, type: 3}
     - target: {fileID: 6379180405890783135, guid: e17a740d574d84eada7f921dba0803b2,
         type: 3}
       propertyPath: m_Name
